@@ -1,0 +1,109 @@
+.hero {
+  width: 100%;
+  height: 550px;
+  background-size: cover;
+  background-position: center right;
+  background-repeat: no-repeat;
+  position: relative;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+}
+
+.hero-overlay {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(15, 23, 42, 0.75) 30%, rgba(15, 23, 42, 0.4) 100%);
+  display: flex;
+  align-items: center;
+}
+
+.hero-content {
+  width: 100%;
+  max-width: 650px; 
+  margin-left: 60px;
+  color: #ffffff;
+  text-align: left;
+  box-sizing: border-box;
+}
+
+.hero-content h1 {
+  font-family: 'Inter', sans-serif !important;
+  font-size: 46px; 
+  font-weight: 700; 
+  line-height: 1.2;
+  margin-top: 0;
+  margin-bottom: 20px;
+  letter-spacing: -0.02em; 
+  color: #ffffff;
+  -webkit-font-smoothing: antialiased;
+}
+
+.hero-content p {
+  font-family: 'Inter', sans-serif !important;
+  font-size: 16px; 
+  font-weight: 400;
+  line-height: 1.6;
+  margin-bottom: 35px;
+  color: rgba(255, 255, 255, 0.9); 
+  -webkit-font-smoothing: antialiased;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 16px;
+}
+
+.book-btn {
+  font-family: 'Inter', sans-serif !important;
+  background: #ff2d2d; 
+  color: #ffffff;
+  border: none;
+  padding: 14px 28px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.book-btn:hover {
+  background: #e02424;
+}
+
+.doctor-btn {
+  font-family: 'Inter', sans-serif !important;
+  background: #ffffff;
+  color: #1e293b; 
+  border: 1px solid #e2e8f0;
+  padding: 14px 28px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.doctor-btn:hover {
+  background: #f8fafc;
+}
+
+@media (max-width: 768px) {
+  .hero-content {
+    max-width: 100%;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-right: 20px;
+  }
+  
+  .hero-content h1 {
+    font-size: 32px;
+  }
+  
+  .hero-buttons {
+    flex-direction: column;
+  }
+  
+  .book-btn, .doctor-btn {
+    width: 100%;
+    text-align: center;
+  }
+}

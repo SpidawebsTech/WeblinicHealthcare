@@ -1,0 +1,26 @@
+/* 1. Import the Google Font (Inter) */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+/* 2. Force every element across the app to use it */
+*, *::before, *::after {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+}
+
+body, html, button, input, select, textarea {
+  /* Forces all elements (including Navbar and Heroes) to use your Figma font */
+  font-family: 'Inter', sans-serif !important; 
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a{
+  text-decoration:none;
+}
+
+li{
+  list-style:none;
+}
+
+button{
+  cursor:pointer;
+}

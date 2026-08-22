@@ -1,0 +1,290 @@
+:root {
+  --primary: #0284c7;
+  --primary-light: #e0f2fe;
+  --success: #16a34a;
+  --warning: #f59e0b;
+  --danger: #dc2626;
+  --bg: #f8fafc;
+  --card-bg: #ffffff;
+  --text-main: #1e293b;
+  --text-muted: #64748b;
+  --border: #e2e8f0;
+}
+
+body {
+  background-color: var(--bg);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: var(--text-main);
+  margin: 0;
+  padding: 20px;
+}
+
+.tracker-container {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Cards */
+.tracker-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.tracker-card h3 {
+  margin-top: 0;
+  margin-bottom: 16px;
+  font-size: 1.1rem;
+  color: var(--text-main);
+}
+
+/* Header */
+.header-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-card h2 {
+  margin: 8px 0 4px 0;
+}
+
+.badge {
+  background: var(--primary-light);
+  color: var(--primary);
+  font-size: 0.8rem;
+  font-weight: bold;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.patient-info {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+/* Status Pills */
+.status-pill {
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+}
+
+.status-pill.en-route { background: #fef3c7; color: #d97706; }
+.status-pill.in-progress { background: #e0f2fe; color: #0284c7; }
+.status-pill.completed { background: #dcfce7; color: #16a34a; }
+.status-pill.escalated { background: #fee2e2; color: #dc2626; }
+
+/* Progress Bar */
+.progress-bar-container {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.progress-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  position: relative;
+}
+
+.progress-step:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  top: 16px;
+  left: 50%;
+  width: 100%;
+  height: 3px;
+  background: var(--border);
+  z-index: 1;
+}
+
+.progress-step.active:not(:last-child)::after {
+  background: var(--primary);
+}
+
+.step-number {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--border);
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  z-index: 2;
+  margin-bottom: 8px;
+}
+
+.progress-step.active .step-number {
+  background: var(--primary);
+  color: #fff;
+}
+
+.step-label {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+/* Grid System */
+.tracker-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .tracker-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Provider & Map */
+.provider-info {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #cbd5e1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: #334155;
+}
+
+.provider-info h4 { margin: 0 0 4px 0; }
+.provider-info p { margin: 0; font-size: 0.85rem; color: var(--text-muted); }
+
+.map-placeholder {
+  height: 150px;
+  background: #e2e8f0;
+  border-radius: 8px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.map-overlay {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 8px 16px;
+  border-radius: 6px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Vitals Block */
+.vitals-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.vital-item {
+  background: var(--bg);
+  padding: 10px;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+}
+
+.vital-label { font-size: 0.75rem; color: var(--text-muted); }
+.vital-value { font-size: 1.2rem; font-weight: bold; }
+
+.notes-box {
+  background: var(--primary-light);
+  padding: 12px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  margin-bottom: 12px;
+}
+
+.notes-box p { margin: 4px 0 0 0; }
+
+/* Escalation Banner */
+.escalation-banner {
+  background: #fee2e2;
+  border: 1px solid var(--danger);
+  border-radius: 8px;
+  padding: 12px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #7f1d1d;
+}
+
+.escalation-content {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.escalation-content p { margin: 2px 0 0 0; font-size: 0.85rem; }
+
+/* Buttons */
+.escalate-trigger-btn {
+  width: 100%;
+  padding: 8px;
+  border: 1px dashed var(--danger);
+  background: transparent;
+  color: var(--danger);
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.resolve-btn {
+  background: var(--danger);
+  color: #fff;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Settlement Block */
+.settlement-details {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.settlement-details .row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+}
+
+.settlement-details .discount { color: var(--success); }
+.settlement-details .total { font-weight: bold; font-size: 1.1rem; }
+
+.pay-btn {
+  width: 100%;
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  padding: 12px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
