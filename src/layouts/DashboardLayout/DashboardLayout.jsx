@@ -77,7 +77,7 @@ function DashboardLayout({ children }) {
           <FiAlertCircle className="emergency-icon" />
           <h4>Emergency?</h4>
           <p>Book instant ambulance or blood request</p>
-          <button onClick={() => navigate("/dashboard/services")}>Request Help</button>
+          <button onClick={() => navigate("/ambulance/emergency")}>Request Help</button>
         </div>
 
         <div className="sidebar-footer">
