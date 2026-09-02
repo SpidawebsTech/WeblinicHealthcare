@@ -1,0 +1,22 @@
+.lo-container { max-width: 720px; margin: 0 auto; }
+.lo-list { display: flex; flex-direction: column; gap: 16px; }
+
+.lo-card {
+  border: 1px solid #f1f5f9; border-radius: 16px; padding: 24px; background: white;
+  display: flex; align-items: center; justify-content: space-between;
+}
+
+.lo-card-left { display: flex; align-items: center; gap: 12px; }
+
+.lo-icon-box {
+  width: 40px; height: 40px; border-radius: 12px; background: #fffbeb; color: #d97706;
+  display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+}
+
+.lo-test-name { font-size: 0.9rem; font-weight: 700; }
+.lo-meta { display: flex; align-items: center; gap: 4px; font-size: 0.75rem; color: #94a3b8; margin-top: 2px; }
+
+.lo-status-tag {
+  font-size: 0.75rem; font-weight: 700; background: #fffbeb; color: #b45309;
+  padding: 6px 14px; border-radius: 999px;
+}

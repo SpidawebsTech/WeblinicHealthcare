@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Stethoscope, Droplet, Siren, Truck, Heart } from "lucide-react";
-import PatientSidebarLayout from "../components/PatientSidebarLayout";
+import DashboardLayout from "../layouts/DashboardLayout/DashboardLayout";
+import "./CareEmergency.css";
 
 const PANELS = [
   {
@@ -31,49 +32,41 @@ const PANELS = [
     desc: "Non-emergency booking, ranked by distance and rating.",
     color: "navy",
   },
-  { to: "/blood/donate", 
-    icon: Heart, 
-    title: "Become a Donor", 
-    desc: "Join the voluntary donor pool.", 
-    color: "red" },
+  {
+    to: "/blood/donate",
+    icon: Heart,
+    title: "Become a Donor",
+    desc: "Join the voluntary donor pool.",
+    color: "red",
+  },
 ];
 
 export default function CareEmergency() {
   return (
-    <PatientSidebarLayout title="Care & Emergency">
-      <div className="max-w-5xl mx-auto px-5 sm:px-8 py-12">
-        <h1 className="text-xl font-bold mb-2">How can we help?</h1>
-        <p className="text-sm text-navy-400 mb-8">
-          Choose a service to get started.
-        </p>
+    <DashboardLayout>
+      <div className="care-page">
+        <h1 className="care-title">How can we help?</h1>
+        <p className="care-subtitle">Choose a service to get started.</p>
 
-        <div className="grid sm:grid-cols-2 gap-5">
+        <div className="care-grid">
           {PANELS.map(({ to, icon: Icon, title, desc, color }, i) => {
             const isLastOdd = i === PANELS.length - 1 && PANELS.length % 2 !== 0;
             return (
               <Link
                 key={title}
                 to={to}
-                className={`border rounded-2xl p-7 bg-white flex flex-col transition-colors ${
-                  color === "red"
-                    ? "border-gray-100 hover:border-brand-red"
-                    : "border-gray-100 hover:border-navy-400"
-                } ${isLastOdd ? "sm:col-span-2 sm:max-w-[calc(50%-10px)] sm:mx-auto sm:w-full" : ""}`}
+                className={`care-panel care-panel-${color} ${isLastOdd ? "care-panel-centered" : ""}`}
               >
-                <div
-                  className={`w-12 h-12 rounded-xl flex items-center justify-center mb-4 ${
-                    color === "red" ? "bg-red-50 text-brand-red" : "bg-navy-50 text-navy-500"
-                }`}
-              >
-                <Icon size={22} />
-              </div>
-              <h3 className="font-bold text-base mb-1.5">{title}</h3>
-              <p className="text-sm text-navy-400">{desc}</p>
-            </Link>
-          );
-        })}
+                <div className={`care-icon-badge care-icon-badge-${color}`}>
+                  <Icon size={22} />
+                </div>
+                <h3 className="care-panel-title">{title}</h3>
+                <p className="care-panel-desc">{desc}</p>
+              </Link>
+            );
+          })}
+        </div>
       </div>
-      </div>
-    </PatientSidebarLayout>
+    </DashboardLayout>
   );
 }

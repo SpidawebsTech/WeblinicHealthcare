@@ -1,59 +1,47 @@
 import { Link } from "react-router-dom";
-import { Check, HelpCircle, Wallet } from "lucide-react";
-import PatientSidebarLayout from "../components/PatientSidebarLayout";
+import { FiCheck, FiHelpCircle, FiCreditCard } from "react-icons/fi";
+import DashboardLayout from "../layouts/DashboardLayout/DashboardLayout";
 import { MEMBERSHIP_PLANS } from "../data/membership";
 import { useWallet } from "../context/WalletContext";
+import "./MembershipPlans.css";
 
 export default function MembershipPlans() {
   const { balance } = useWallet();
 
   return (
-    <PatientSidebarLayout title="Membership Plans">
-      <div className="max-w-5xl mx-auto px-5 sm:px-8 py-8">
-        <div className="flex items-center justify-between mb-1">
-          <h1 className="text-xl font-bold">Choose a plan</h1>
-          <Link to="/wallet" className="text-xs font-bold text-navy-500 hover:text-navy-700">
+    <DashboardLayout>
+      <div className="mp-container">
+        <div className="mp-header-row">
+          <h1>Choose a plan</h1>
+          <Link to="/wallet" className="mp-wallet-link">
             Wallet balance: {balance.toLocaleString()} →
           </Link>
         </div>
-        <p className="text-sm text-navy-400 mb-6">Plans are paid from your wallet balance.</p>
+        <p className="mp-subtitle">Plans are paid from your wallet balance.</p>
 
-        <div className="grid sm:grid-cols-3 gap-6 mb-8">
+        <div className="mp-plans-grid">
           {MEMBERSHIP_PLANS.map((plan) => (
-            <div
-              key={plan.id}
-              className={`relative border rounded-2xl p-6 bg-white ${
-                plan.popular ? "border-brand-red shadow-lg" : "border-gray-100"
-              }`}
-            >
-              {plan.popular && (
-                <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-brand-red text-white text-[10px] font-bold px-3 py-1 rounded-full">
-                  MOST POPULAR
-                </span>
-              )}
-              <h3 className="font-bold text-lg mb-1">{plan.name}</h3>
-              <div className="mb-4">
-                <div className="flex items-center gap-1.5">
-                  <Wallet size={18} className="text-navy-500" />
-                  <span className="text-2xl font-bold">{plan.price.toLocaleString()}</span>
+            <div key={plan.id} className={`mp-plan-card ${plan.popular ? "popular" : ""}`}>
+              {plan.popular && <span className="mp-popular-badge">MOST POPULAR</span>}
+              <h3>{plan.name}</h3>
+              <div className="mp-price-block">
+                <div className="mp-price-row">
+                  <FiCreditCard size={18} />
+                  <span className="mp-price">{plan.price.toLocaleString()}</span>
                 </div>
-                <span className="text-xs text-navy-400">/{plan.period}</span>
+                <span className="mp-period">/{plan.period}</span>
               </div>
-              <div className="flex flex-col gap-2.5 mb-6">
+              <div className="mp-perks">
                 {plan.perks.map((perk) => (
-                  <div key={perk} className="flex items-start gap-2 text-sm">
-                    <Check size={15} className="text-green-600 mt-0.5 shrink-0" />
+                  <div key={perk} className="mp-perk">
+                    <FiCheck size={15} />
                     {perk}
                   </div>
                 ))}
               </div>
               <Link
                 to={`/membership/checkout/${plan.id}`}
-                className={`block text-center w-full text-sm font-bold py-3 rounded-full transition-colors ${
-                  plan.popular
-                    ? "bg-brand-red hover:bg-brand-redDark text-white"
-                    : "bg-navy-50 hover:bg-navy-100 text-navy-700"
-                }`}
+                className={`mp-choose-btn ${plan.popular ? "popular" : ""}`}
               >
                 Choose {plan.name}
               </Link>
@@ -61,23 +49,23 @@ export default function MembershipPlans() {
           ))}
         </div>
 
-        <div className="border border-gray-100 rounded-2xl p-6 bg-white">
-          <div className="flex items-center gap-2 mb-4">
-            <HelpCircle size={16} className="text-navy-400" />
-            <h3 className="font-bold text-sm">Frequently asked questions</h3>
+        <div className="mp-faq-card">
+          <div className="mp-faq-heading">
+            <FiHelpCircle size={16} />
+            <h3>Frequently asked questions</h3>
           </div>
-          <div className="grid sm:grid-cols-2 gap-4 text-xs text-navy-500">
+          <div className="mp-faq-grid">
             <div>
-              <p className="font-semibold text-navy-700 mb-1">Can I change plans later?</p>
+              <p className="mp-faq-q">Can I change plans later?</p>
               <p>Yes, upgrade or downgrade anytime from My Membership.</p>
             </div>
             <div>
-              <p className="font-semibold text-navy-700 mb-1">What happens to unused consultations?</p>
+              <p className="mp-faq-q">What happens to unused consultations?</p>
               <p>Allowances reset each billing cycle and don't roll over.</p>
             </div>
           </div>
         </div>
       </div>
-    </PatientSidebarLayout>
+    </DashboardLayout>
   );
 }

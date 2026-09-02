@@ -1,0 +1,56 @@
+.mc-not-found { text-align: center; padding: 96px 0; color: #94a3b8; }
+
+.mc-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 24px; max-width: 1024px; margin: 0 auto; }
+@media (max-width: 768px) { .mc-grid { grid-template-columns: 1fr; } }
+
+.mc-card { border: 1px solid #f1f5f9; border-radius: 16px; padding: 24px; background: white; }
+.mc-card h2 { font-size: 1.1rem; font-weight: 700; margin: 0 0 16px 0; }
+
+.mc-summary-box { background: #f8fafc; border-radius: 12px; padding: 16px; margin-bottom: 24px; font-size: 0.9rem; }
+.mc-summary-row { display: flex; justify-content: space-between; margin-bottom: 4px; color: #94a3b8; }
+.mc-summary-total { padding-top: 8px; margin-top: 8px; border-top: 1px solid #e2e8f0; }
+.mc-bold { font-weight: 600; color: #0f172a; }
+.mc-cost { display: flex; align-items: center; gap: 4px; font-weight: 700; color: #ff2b2b; }
+
+.mc-wallet-row {
+  display: flex; align-items: center; justify-content: space-between; background: #f8fafc;
+  border-radius: 12px; padding: 16px; margin-bottom: 24px;
+}
+.mc-wallet-label { display: flex; align-items: center; gap: 8px; font-size: 0.9rem; font-weight: 600; color: #004b75; }
+.mc-wallet-balance { display: flex; align-items: center; gap: 4px; font-size: 0.9rem; font-weight: 700; }
+.mc-wallet-balance.ok { color: #15803d; }
+.mc-wallet-balance.low { color: #ff2b2b; }
+
+.mc-warning {
+  display: flex; align-items: flex-start; gap: 8px; background: #fef2f2; color: #ff2b2b;
+  font-size: 0.75rem; padding: 12px; border-radius: 8px; margin-bottom: 16px;
+}
+.mc-warning-link { font-weight: 700; text-decoration: underline; color: #ff2b2b; }
+
+.mc-error { font-size: 0.75rem; color: #dc2626; margin-bottom: 16px; }
+
+.mc-primary-btn {
+  width: 100%; background: #ff2b2b; color: white; border: none; padding: 12px;
+  border-radius: 999px; font-size: 0.9rem; font-weight: 700; cursor: pointer;
+}
+.mc-primary-btn:hover { background: #d61f1f; }
+.mc-primary-btn:disabled { background: #e2e8f0; cursor: not-allowed; }
+
+.mc-secondary-btn {
+  width: 100%; background: #004b75; color: white; border: none; padding: 12px;
+  border-radius: 999px; font-size: 0.9rem; font-weight: 700; cursor: pointer;
+}
+
+.mc-confirmed { text-align: center; padding: 32px; }
+.mc-confirmed-icon {
+  width: 56px; height: 56px; border-radius: 50%; background: #dcfce7; color: #16a34a;
+  display: flex; align-items: center; justify-content: center; margin: 0 auto 16px;
+}
+.mc-confirmed h2 { margin-bottom: 8px; }
+.mc-confirmed p { font-size: 0.9rem; color: #94a3b8; margin-bottom: 24px; }
+
+.mc-sidebar { border: 1px solid #f1f5f9; border-radius: 16px; padding: 24px; background: white; height: fit-content; }
+.mc-sidebar h3 { font-size: 0.9rem; font-weight: 700; margin: 0 0 12px 0; }
+.mc-perks { display: flex; flex-direction: column; gap: 10px; font-size: 0.75rem; color: #64748b; }
+.mc-perk { display: flex; align-items: flex-start; gap: 8px; }
+.mc-check { color: #16a34a; font-weight: 700; }

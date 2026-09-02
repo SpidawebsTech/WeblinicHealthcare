@@ -1,10 +1,10 @@
-import PatientSidebarLayout from "../components/PatientSidebarLayout";
-import DoctorSearchListing from "../components/DoctorSearchListing";
+import DashboardLayout from "../layouts/DashboardLayout/DashboardLayout";
+import DoctorSearchListing from "../components/DoctorSearch/DoctorSearchListing";
 
 export default function DoctorSearch() {
   return (
-    <PatientSidebarLayout title="Find a Doctor">
+    <DashboardLayout>
       <DoctorSearchListing />
-    </PatientSidebarLayout>
+    </DashboardLayout>
   );
 }

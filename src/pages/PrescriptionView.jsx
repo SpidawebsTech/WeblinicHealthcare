@@ -1,6 +1,7 @@
-import { Pill, Download, Stethoscope } from "lucide-react";
+import { FiPackage, FiDownload, FiUser } from "react-icons/fi";
 import jsPDF from "jspdf";
-import PatientSidebarLayout from "../components/PatientSidebarLayout";
+import DashboardLayout from "../layouts/DashboardLayout/DashboardLayout";
+import "./PrescriptionView.css";
 
 const PRESCRIPTIONS = [
   { id: 1, doctor: "Dr. Mehreen Fatima", date: "Aug 2, 2026", items: ["Amoxicillin 500mg - 3x daily, 7 days", "Paracetamol 500mg - as needed for fever"] },
@@ -10,7 +11,7 @@ function downloadPrescriptionPDF(prescription) {
   const doc = new jsPDF();
 
   doc.setFontSize(18);
-  doc.setTextColor(15, 76, 129); // navy
+  doc.setTextColor(15, 76, 129);
   doc.text("Weblinic Healthcare", 20, 20);
 
   doc.setFontSize(11);
@@ -26,7 +27,7 @@ function downloadPrescriptionPDF(prescription) {
   doc.text(`Date: ${prescription.date}`, 20, 52);
 
   doc.setFontSize(12);
-  doc.setTextColor(225, 72, 60); // brand red
+  doc.setTextColor(225, 72, 60);
   doc.text("Medications", 20, 66);
 
   doc.setFontSize(11);
@@ -46,35 +47,32 @@ function downloadPrescriptionPDF(prescription) {
 
 export default function PrescriptionView() {
   return (
-    <PatientSidebarLayout title="Prescriptions">
-      <div className="max-w-3xl mx-auto px-5 sm:px-8 py-8">
-        <div className="flex flex-col gap-4">
+    <DashboardLayout>
+      <div className="rx-container">
+        <div className="rx-list">
           {PRESCRIPTIONS.map((p) => (
-            <div key={p.id} className="border border-gray-100 rounded-2xl p-6 bg-white">
-              <div className="flex items-center justify-between mb-4">
-                <div className="flex items-center gap-2 text-sm font-bold">
-                  <Stethoscope size={16} className="text-navy-400" /> {p.doctor}
+            <div key={p.id} className="rx-card">
+              <div className="rx-card-header">
+                <div className="rx-doctor">
+                  <FiUser size={16} /> {p.doctor}
                 </div>
-                <span className="text-xs text-navy-400">{p.date}</span>
+                <span className="rx-date">{p.date}</span>
               </div>
-              <div className="flex flex-col gap-2 mb-4">
+              <div className="rx-items">
                 {p.items.map((item) => (
-                  <div key={item} className="flex items-start gap-2 text-sm">
-                    <Pill size={15} className="text-brand-red mt-0.5 shrink-0" />
+                  <div key={item} className="rx-item">
+                    <FiPackage size={15} />
                     <span>{item}</span>
                   </div>
                 ))}
               </div>
-              <button
-                onClick={() => downloadPrescriptionPDF(p)}
-                className="flex items-center gap-2 text-sm font-bold text-navy-500 hover:text-navy-700"
-              >
-                <Download size={15} /> Download PDF
+              <button onClick={() => downloadPrescriptionPDF(p)} className="rx-download-btn">
+                <FiDownload size={15} /> Download PDF
               </button>
             </div>
           ))}
         </div>
       </div>
-    </PatientSidebarLayout>
+    </DashboardLayout>
   );
 }

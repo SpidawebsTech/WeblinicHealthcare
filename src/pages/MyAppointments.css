@@ -1,0 +1,60 @@
+.ma-container { max-width: 720px; margin: 0 auto; }
+
+.ma-tabs { display: flex; gap: 8px; margin-bottom: 24px; }
+.ma-tab-btn {
+  padding: 8px 20px; border-radius: 999px; font-size: 0.9rem; font-weight: 700;
+  background: #f8fafc; color: #004b75; border: none; cursor: pointer;
+}
+.ma-tab-btn.active { background: #004b75; color: white; }
+
+.ma-list { display: flex; flex-direction: column; gap: 16px; }
+
+.ma-card {
+  border: 1px solid #f1f5f9; border-radius: 16px; padding: 20px; background: white;
+  display: flex; align-items: center; justify-content: space-between; gap: 16px;
+}
+
+.ma-card-left { display: flex; align-items: center; gap: 16px; }
+
+.ma-avatar {
+  width: 44px; height: 44px; border-radius: 50%; background: #004b75; color: white;
+  font-size: 0.75rem; font-weight: 700; display: flex; align-items: center;
+  justify-content: center; flex-shrink: 0;
+}
+
+.ma-doctor-name { font-size: 0.9rem; font-weight: 700; }
+.ma-doctor-spec { font-size: 0.75rem; color: #94a3b8; }
+.ma-datetime { font-size: 0.75rem; color: #94a3b8; margin-top: 4px; }
+
+.ma-card-right { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
+
+.ma-join-btn {
+  display: flex; align-items: center; gap: 6px; background: #16a34a; color: white;
+  border: none; padding: 8px 16px; border-radius: 999px; font-size: 0.75rem;
+  font-weight: 700; cursor: pointer;
+}
+.ma-join-btn:hover { background: #15803d; }
+
+.ma-inclinic-tag {
+  display: flex; align-items: center; gap: 6px; background: #f1f5f9; color: #475569;
+  padding: 8px 16px; border-radius: 999px; font-size: 0.75rem; font-weight: 700;
+}
+
+.ma-cancel-btn {
+  width: 32px; height: 32px; border-radius: 50%; background: #f8fafc; color: #94a3b8;
+  border: none; display: flex; align-items: center; justify-content: center; cursor: pointer;
+}
+.ma-cancel-btn:hover { background: #fef2f2; color: #ff2b2b; }
+
+.ma-review-link {
+  font-size: 0.75rem; font-weight: 700; color: #15803d; background: #f0fdf4;
+  padding: 8px 16px; border-radius: 999px; text-decoration: none;
+}
+.ma-review-link:hover { background: #dcfce7; }
+
+.ma-cancelled-tag {
+  font-size: 0.75rem; font-weight: 700; color: #94a3b8; background: #f8fafc;
+  padding: 8px 16px; border-radius: 999px;
+}
+
+.ma-empty { text-align: center; font-size: 0.9rem; color: #94a3b8; padding: 48px 0; }
