@@ -1,0 +1,33 @@
+.ld-section { padding: 64px 32px; }
+
+.ld-header { max-width: 896px; margin: 0 auto 44px; text-align: center; }
+
+.ld-divider-row { display: flex; align-items: center; justify-content: center; gap: 8px; margin-bottom: 12px; }
+.ld-divider-line { width: 32px; height: 1px; background: #e2e8f0; }
+.ld-divider-dot { width: 6px; height: 6px; border-radius: 50%; background: #ff2b2b; }
+
+.ld-header h2 { font-size: 1.5rem; font-weight: 700; margin-bottom: 8px; }
+.ld-header p { font-size: 0.9rem; color: #94a3b8; }
+
+.ld-grid {
+  max-width: 448px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+}
+
+.ld-person { text-align: center; }
+
+.ld-photo {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto 16px;
+  display: block;
+}
+
+.ld-person h4 { font-size: 0.9rem; font-weight: 700; margin-bottom: 4px; }
+
+.ld-title { font-size: 0.75rem; font-weight: 600; color: #ff2b2b; }

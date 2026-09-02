@@ -1,0 +1,106 @@
+.mv-section { padding: 56px 32px; }
+
+.mv-grid {
+  max-width: 896px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+@media (max-width: 640px) {
+  .mv-grid { grid-template-columns: 1fr; }
+}
+
+.mv-card {
+  position: relative;
+  background: white;
+  border: 1px solid #f1f5f9;
+  border-radius: 16px;
+  box-shadow: 0 8px 28px rgba(15, 76, 129, 0.06);
+  cursor: pointer;
+  overflow: hidden;
+  transition: height 0.5s ease-in-out;
+  height: 220px;
+}
+
+.mv-card.open { height: 340px; }
+
+.mv-collapsed {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 36px;
+  transition: opacity 0.3s ease;
+  opacity: 1;
+}
+
+.mv-collapsed.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.mv-expanded {
+  position: absolute;
+  inset: 0;
+  padding: 36px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  transition: opacity 0.5s ease 0.15s;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.mv-expanded.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.mv-icon-box {
+  width: 56px;
+  height: 56px;
+  border-radius: 12px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.mv-icon-navy { background: linear-gradient(135deg, #004b75 0%, #003858 100%); }
+.mv-icon-red { background: linear-gradient(135deg, #ff2b2b 0%, #d61f1f 100%); }
+
+.mv-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 12px;
+}
+
+.mv-label-red { color: #ff2b2b; }
+.mv-label-navy { color: #004b75; }
+
+.mv-text {
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+.mv-hint-wrap { margin-top: auto; }
+
+.mv-hint {
+  font-size: 0.75rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.mv-collapse-hint { margin-top: 20px; color: #004b75; }

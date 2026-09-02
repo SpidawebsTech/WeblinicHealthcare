@@ -52,7 +52,7 @@ function DashboardLayout({ children }) {
             <FiActivity /> Lab Diagnostics
           </NavLink>
 
-          <NavLink to="/dashboard/services" className={({ isActive }) => isActive ? "menu-item active" : "menu-item"}>
+          <NavLink to="/care" className={({ isActive }) => isActive ? "menu-item active" : "menu-item"}>
             <FiHeart /> Care & Emergency
           </NavLink>
 

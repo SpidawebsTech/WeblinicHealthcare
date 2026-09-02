@@ -1,0 +1,40 @@
+.bpc-section { padding: 64px 32px; }
+
+.bpc-card {
+  max-width: 1000px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #004b75 0%, #003858 100%);
+  padding: 48px 56px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 640px) {
+  .bpc-card { flex-direction: column; text-align: center; }
+}
+
+.bpc-circle {
+  position: absolute;
+  width: 288px;
+  height: 288px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  top: -112px;
+  right: -96px;
+}
+
+.bpc-text { position: relative; z-index: 1; }
+.bpc-text h2 { font-size: 1.5rem; font-weight: 700; color: white; margin-bottom: 10px; }
+.bpc-text p { font-size: 0.9rem; color: rgba(255, 255, 255, 0.75); max-width: 448px; line-height: 1.6; }
+
+.bpc-btn {
+  position: relative; z-index: 1; background: white; color: #004b75; font-size: 0.9rem;
+  font-weight: 700; padding: 14px 28px; border-radius: 999px; white-space: nowrap; border: none; cursor: pointer;
+}
+.bpc-btn:hover { background: #f1f5f9; }

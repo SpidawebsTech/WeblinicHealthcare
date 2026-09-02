@@ -1,19 +1,19 @@
-import Navbar from "../components/Navbar";
-import PartnershipsHero from "../components/PartnershipsHero";
-import PartnersListing from "../components/PartnersListing";
-import PartnershipBenefits from "../components/PartnershipBenefits";
-import BecomePartnerCTA from "../components/BecomePartnerCTA";
-import Footer from "../components/Footer";
+import Navbar from "../components/Navbar/Navbar";
+import PartnershipsHero from "../components/PartnershipsHero/PartnershipsHero";
+import PartnersListing from "../components/PartnersListing/PartnersListing";
+import PartnershipBenefits from "../components/PartnershipBenefits/PartnershipBenefits";
+import BecomePartnerCTA from "../components/BecomePartnerCTA/BecomePartnerCTA";
+import Footer from "../components/Footer/Footer";
 
 export default function Partnerships() {
   return (
-    <div className="min-h-screen bg-white">
+    <>
       <Navbar />
       <PartnershipsHero />
       <PartnersListing />
       <PartnershipBenefits />
       <BecomePartnerCTA />
       <Footer />
-    </div>
+    </>
   );
 }
