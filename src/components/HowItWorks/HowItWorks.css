@@ -1,0 +1,144 @@
+.how-it-works-section {
+  background-color: #f8fafc; 
+  padding: 4rem 2rem;
+  text-align: center;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.how-decorator {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0.75rem;
+}
+
+.how-decorator .dot {
+  width: 6px;
+  height: 6px;
+  background-color: #ff2d2d;
+  border-radius: 50%;
+}
+
+.how-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0 0 0.5rem 0;
+}
+
+.how-subtitle {
+  font-size: 0.95rem;
+  color: #64748b;
+  margin: 0 0 3rem 0;
+}
+
+.service-tabs-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.25rem;
+  max-width: 1000px;
+  margin: 0 auto 4rem auto;
+}
+
+.tab-card {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 1.5rem 1rem;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  transition: all 0.2s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+}
+
+.tab-icon-wrapper {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: #f1f5f9;
+  color: #004d7c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.tab-label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #334155;
+  transition: color 0.2s ease;
+}
+
+.tab-card:hover {
+  border-color: #cbd5e1;
+}
+
+.tab-card.active {
+  border: 1.5px solid #004d7c;
+  background-color: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 77, 124, 0.08);
+}
+
+.tab-card.active .tab-icon-wrapper {
+  background-color: #004d7c;
+  color: #ffffff;
+}
+
+.tab-card.active .tab-label {
+  color: #0f172a;
+  font-weight: 700;
+}
+
+.how-steps-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .how-steps-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.step-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.step-circle {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 1.5px solid #004d7c;
+  color: #004d7c;
+  font-size: 1.1rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+  background-color: #ffffff;
+}
+
+.step-item-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0 0 0.5rem 0;
+}
+
+.step-item-desc {
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: #64748b;
+  margin: 0;
+  max-width: 260px;
+}

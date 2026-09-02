@@ -1,19 +1,25 @@
-import Navbar from "../components/Navbar";
-import Hero from "../components/Hero";
-import Services from "../components/Services";
-import HowItWorks from "../components/HowItWorks";
-import DoctorCTA from "../components/DoctorCTA";
-import Footer from "../components/Footer";
+import Navbar from "../components/Navbar/Navbar";
+import Hero from "../components/Hero/Hero";
+import Services from "../components/Services/Services";
+import HowItWorks from "../components/HowItWorks/HowItWorks";
+import Feedback from "../components/Feedback/Feedback";
+import Blog from "../components/Blog/Blog";
+import DoctorCTA from "../components/DoctorCTA/DoctorCTA";
+import Footer from "../components/Footer/Footer";
 
-export default function Home() {
+function Home() {
   return (
-    <div className="min-h-screen bg-white">
+    <>
       <Navbar />
       <Hero />
       <Services />
       <HowItWorks />
+      <Feedback />
+      <Blog />
       <DoctorCTA />
       <Footer />
-    </div>
+    </>
   );
 }
+
+export default Home;

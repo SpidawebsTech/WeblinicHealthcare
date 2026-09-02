@@ -1,0 +1,236 @@
+.login-form-container {
+  flex: 0 0 55%;
+  max-width: 55%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  background-color: #f8fafc;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  overflow-y: auto;
+}
+
+.form-wrapper {
+  margin-top: -5.5rem;
+  width: 100%;
+  max-width: 500px;
+  background: #ffffff;
+  padding: 36px;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.top-links {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.top-links a {
+  text-decoration: none;
+  color: #8a94a6;
+  font-size: 0.75rem;
+  transition: color 0.2s;
+}
+
+.top-links a:hover {
+  color: #14598a;
+}
+
+.form-header h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0 0 6px 0;
+  text-align: center;
+}
+
+.form-header p {
+  font-size: 0.88rem;
+  color: #64748b;
+  margin: 0 0 24px 0;
+  text-align: center;
+}
+
+.role-tab-container {
+  display: flex;
+  background: #f1f5f9;
+  padding: 4px;
+  border-radius: 10px;
+  margin-bottom: 24px;
+}
+
+.role-tab {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 14px;
+  border: none;
+  background: transparent;
+  border-radius: 8px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #64748b;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.role-tab.active {
+  background: #ffffff;
+  color: #0f172a;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.tab-icon {
+  font-size: 16px;
+}
+
+.google-signup-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 11px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  background: #ffffff;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #334155;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.google-signup-btn:hover {
+  background: #f8fafc;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 20px 0;
+  color: #94a3b8;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.divider::before,
+.divider::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.divider span {
+  padding: 0 10px;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.l-input-field label {
+  display: block;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #334155;
+  margin-bottom: 6px;
+}
+
+.l-input-group {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.l-field-icon {
+  position: absolute;
+  left: 12px;
+  color: #94a3b8;
+  font-size: 16px;
+}
+
+.l-input-group input {
+  width: 100%;
+  padding: 10px 12px 10px 42px; 
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 0.88rem;
+  color: #0f172a;
+  outline: none;
+  box-sizing: border-box; 
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.l-input-group input:focus {
+  border-color: #0284c7;
+  box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.12);
+}
+
+.submit-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: #ffffff;
+  cursor: pointer;
+  transition: transform 0.1s ease, background 0.2s ease;
+  margin-top: 8px;
+}
+
+.submit-btn:active {
+  transform: scale(0.99);
+}
+
+.submit-btn.primary-red {
+  background: #ff2b2b;
+}
+
+.submit-btn.primary-red:hover {
+  background: #e02020;
+}
+
+.submit-btn.primary-blue {
+  background: #004b75;
+}
+
+.submit-btn.primary-blue:hover {
+  background: #003756;
+}
+
+.form-footer {
+  text-align: center;
+  margin-top: 24px;
+  font-size: 0.85rem;
+  color: #64748b;
+}
+
+.login-link {
+  color: #ff2b2b;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+@media (max-width: 900px) {
+  .login-form-container {
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding: 20px;
+  }
+}

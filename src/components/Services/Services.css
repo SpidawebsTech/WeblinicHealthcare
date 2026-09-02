@@ -1,0 +1,216 @@
+.services-section {
+  background-color: #f8fafc;
+  padding: 4.5rem 2rem;
+  text-align: center;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* Red Accent Decorator Dot */
+.services-decorator {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0.75rem;
+}
+
+.services-decorator .dot {
+  width: 6px;
+  height: 6px;
+  background-color: #ff2d2d;
+  border-radius: 50%;
+}
+
+.services-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0 0 0.5rem 0;
+}
+
+.services-subtitle {
+  font-size: 0.95rem;
+  color: #64748b;
+  margin: 0 0 3.5rem 0;
+}
+
+/* ==========================================================================
+   Carousel Outer Wrapper & Alignment
+   ========================================================================== */
+.carousel-container {
+  position: relative;
+  max-width: 900px; /* Clean standard width for 2 cards side-by-side */
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+.carousel-track-wrapper {
+  overflow: hidden;
+  width: 100%;
+  padding: 10px 0; /* Ensures box-shadow and button edges don't get cut off */
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.4s ease-in-out;
+  width: 100%;
+}
+
+/* 2-Column Item Wrapper */
+.blue-service-card-wrapper {
+  flex: 0 0 50%; /* Holds two cards per slide window */
+  padding: 0 10px; /* Gap separation between adjacent cards */
+  box-sizing: border-box;
+}
+
+/* --- Dark Blue Service Card --- */
+.blue-service-card {
+  background-color: #004d7c; /* Signature Figma Dark Medical Blue */
+  border-radius: 20px;
+  padding: 2.25rem 2rem;
+  box-sizing: border-box;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  text-align: left;
+  min-height: 310px;
+}
+
+.card-top-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Thin Circle Icon Container */
+.card-icon-circle {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+  background-color: transparent;
+}
+
+.s-card-title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin: 0 0 0.85rem 0;
+  color: white !important;
+  letter-spacing: -0.01em;
+}
+
+.card-description {
+  font-size: 0.9rem;
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.85);
+  margin: 0 0 2rem 0;
+}
+
+/* Red Pill Button */
+.card-action-btn {
+  background-color: #ff2d2d;
+  color: #ffffff;
+  border: none;
+  padding: 0.65rem 1.25rem;
+  border-radius: 50px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.card-action-btn:hover {
+  background-color: #e02424;
+}
+
+/* ==========================================================================
+   Separated Floating Navigation Arrows (Exact Figma Match)
+   ========================================================================== */
+.carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: #004d7c; /* Solid Dark Blue Fill */
+  border: none; /* Removed outline for clean floating look */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  color: #ffffff;
+  transition: all 0.2s ease;
+}
+
+.carousel-arrow:hover {
+  background-color: #00385a;
+  transform: translateY(-50%) scale(1.08);
+}
+
+/* Float buttons clearly outside with ample breathing space */
+.carousel-arrow.prev {
+  left: -50px;
+}
+
+.carousel-arrow.next {
+  right: -50px;
+}
+
+/* ==========================================================================
+   Carousel Pagination Dots
+   ========================================================================== */
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  margin-top: 2rem;
+}
+
+.dot-pill {
+  height: 6px;
+  width: 6px;
+  background-color: #e2e8f0;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.dot-pill.active {
+  width: 20px;
+  border-radius: 10px;
+  background-color: #004d7c;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 1024px) {
+  .carousel-arrow.prev {
+    left: -20px;
+  }
+  .carousel-arrow.next {
+    right: -20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .blue-service-card-wrapper {
+    flex: 0 0 100%; /* Show 1 card on smaller screens */
+  }
+
+  .carousel-arrow.prev {
+    left: 0px;
+  }
+
+  .carousel-arrow.next {
+    right: 0px;
+  }
+}
