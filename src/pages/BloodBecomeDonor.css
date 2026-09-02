@@ -1,0 +1,29 @@
+.bbd-success-wrap { max-width: 640px; margin: 0 auto; }
+.bbd-success-card { text-align: center; border: 1px solid #f1f5f9; border-radius: 16px; padding: 40px; background: white; }
+.bbd-success-icon { width: 56px; height: 56px; border-radius: 50%; background: #dcfce7; color: #16a34a; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; }
+.bbd-success-card p { font-size: 0.9rem; color: #94a3b8; }
+
+.bbd-container { max-width: 1024px; margin: 0 auto; }
+.bbd-container > h1 { font-size: 1.25rem; font-weight: 700; margin-bottom: 4px; }
+.bbd-subtitle { font-size: 0.9rem; color: #94a3b8; margin-bottom: 24px; }
+
+.bbd-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 24px; }
+@media (max-width: 768px) { .bbd-grid { grid-template-columns: 1fr; } }
+
+.bbd-card { border: 1px solid #f1f5f9; border-radius: 16px; padding: 24px; background: white; }
+.bbd-step-heading { display: flex; align-items: center; gap: 8px; margin-bottom: 16px; }
+.bbd-step-num { width: 24px; height: 24px; border-radius: 50%; background: #fef2f2; color: #ff2b2b; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 700; }
+.bbd-step-heading h3 { font-size: 0.9rem; font-weight: 700; margin: 0; }
+
+.bbd-type-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
+.bbd-type-btn { padding: 10px; border-radius: 8px; font-size: 0.9rem; font-weight: 700; background: #f8fafc; color: #475569; border: none; cursor: pointer; }
+.bbd-type-btn.active { background: #ff2b2b; color: white; }
+
+.bbd-sidebar { border: 1px solid #f1f5f9; border-radius: 16px; padding: 24px; background: white; height: fit-content; position: sticky; top: 24px; }
+.bbd-why-heading { display: flex; align-items: center; gap: 8px; margin-bottom: 16px; }
+.bbd-why-heading h3 { font-size: 0.9rem; font-weight: 700; margin: 0; }
+.bbd-why-list { display: flex; flex-direction: column; gap: 12px; font-size: 0.75rem; color: #64748b; margin-bottom: 20px; }
+
+.bbd-register-btn { width: 100%; background: #ff2b2b; color: white; border: none; padding: 12px; border-radius: 999px; font-size: 0.9rem; font-weight: 700; cursor: pointer; }
+.bbd-register-btn:hover { background: #d61f1f; }
+.bbd-register-btn:disabled { background: #e2e8f0; cursor: not-allowed; }

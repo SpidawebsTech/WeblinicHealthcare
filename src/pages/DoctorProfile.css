@@ -1,0 +1,181 @@
+.dp-not-found {
+  text-align: center;
+  padding: 96px 0;
+  color: #94a3b8;
+}
+
+.dp-container {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+.dp-back-link {
+  font-size: 0.9rem;
+  color: #94a3b8;
+  text-decoration: none;
+}
+
+.dp-back-link:hover {
+  color: #0f172a;
+}
+
+.dp-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 32px;
+  margin-top: 24px;
+}
+
+@media (max-width: 768px) {
+  .dp-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.dp-main-card {
+  border: 1px solid #f1f5f9;
+  border-radius: 16px;
+  padding: 32px;
+  background: white;
+}
+
+.dp-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 24px;
+}
+
+.dp-avatar-wrap {
+  position: relative;
+}
+
+.dp-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: #004b75;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dp-online-dot {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 16px;
+  height: 16px;
+  background: #22c55e;
+  border: 2px solid white;
+  border-radius: 50%;
+}
+
+.dp-header h1 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.dp-spec {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #ff2b2b;
+}
+
+.dp-rating {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.75rem;
+  color: #94a3b8;
+  margin-top: 4px;
+}
+
+.dp-info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  font-size: 0.9rem;
+  margin-bottom: 24px;
+}
+
+@media (max-width: 480px) {
+  .dp-info-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.dp-info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  color: #94a3b8;
+}
+
+.dp-info-label {
+  font-size: 0.75rem;
+  color: #94a3b8;
+}
+
+.dp-info-value {
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.dp-timings {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.dp-timing-chip {
+  font-size: 0.75rem;
+  font-weight: 600;
+  background: #f0f9ff;
+  color: #004b75;
+  padding: 6px 14px;
+  border-radius: 999px;
+}
+
+.dp-sidebar {
+  border: 1px solid #f1f5f9;
+  border-radius: 16px;
+  padding: 24px;
+  background: white;
+  height: fit-content;
+}
+
+.dp-fee-label {
+  font-size: 0.85rem;
+  color: #94a3b8;
+  margin-bottom: 4px;
+}
+
+.dp-fee {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.dp-book-btn {
+  display: block;
+  width: 100%;
+  text-align: center;
+  background: #ff2b2b;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.dp-book-btn:hover {
+  background: #d61f1f;
+}

@@ -1,0 +1,109 @@
+.as-container {
+  max-width: 512px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.as-booked-card {
+  text-align: center;
+  border: 1px solid #f1f5f9;
+  border-radius: 16px;
+  padding: 32px;
+  background: white;
+}
+
+.as-booked-card h2 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.as-booked-card p {
+  font-size: 0.9rem;
+  color: #94a3b8;
+}
+
+.as-track-link {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #64748b;
+  text-decoration: none;
+}
+
+.as-track-link:hover {
+  color: #334155;
+}
+
+.as-subtitle {
+  font-size: 0.9rem;
+  color: #94a3b8;
+  margin-bottom: 24px;
+}
+
+.as-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.as-vehicle-card {
+  border: 1px solid #f1f5f9;
+  border-radius: 16px;
+  padding: 20px;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.as-vehicle-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.as-vehicle-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  background: #f0f7fb;
+  color: #004b75;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.as-vehicle-name {
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.as-vehicle-meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.75rem;
+  color: #94a3b8;
+}
+
+.as-rating {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: #eab308;
+}
+
+.as-book-btn {
+  background: #004b75;
+  color: white;
+  border: none;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 8px 16px;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.as-book-btn:hover {
+  background: #003a5c;
+}

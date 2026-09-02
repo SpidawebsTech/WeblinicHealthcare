@@ -1,0 +1,8 @@
+export const DOCTORS = [
+  { slug: "mehreen-fatima", initials: "MF", name: "Dr. Mehreen Fatima", spec: "General Physician", years: 8, rating: 4.9, fee: 1500, online: true, distanceKm: 2.3, employer: "Shifa International Hospital", qualification: "MBBS, FCPS (Medicine)", timings: ["Mon 4–8 PM", "Tue 4–8 PM", "Wed 4–8 PM", "Fri 4–8 PM"] },
+  { slug: "tariq-ahmed", initials: "TA", name: "Dr. Tariq Ahmed", spec: "Dermatologist", years: 12, rating: 4.8, fee: 2000, online: false, distanceKm: 5.1, employer: "Jinnah Hospital", qualification: "MBBS, FCPS (Dermatology)", timings: ["Mon 5–9 PM", "Thu 5–9 PM"] },
+  { slug: "sana-riaz", initials: "SR", name: "Dr. Sana Riaz", spec: "Psychiatrist", years: 6, rating: 4.9, fee: 1800, online: true, distanceKm: 1.4, employer: "PIMS", qualification: "MBBS, FCPS (Psychiatry)", timings: ["Tue 6–9 PM", "Sat 10 AM–1 PM"] },
+  { slug: "hassan-khalid", initials: "HK", name: "Dr. Hassan Khalid", spec: "Pediatrician", years: 10, rating: 4.7, fee: 1600, online: false, distanceKm: 8.7, employer: "Shifa International Hospital", qualification: "MBBS, FCPS (Pediatrics)", timings: ["Mon–Fri 3–6 PM"] },
+  { slug: "ayesha-noor", initials: "AN", name: "Dr. Ayesha Noor", spec: "Gynecologist", years: 9, rating: 4.9, fee: 1900, online: true, distanceKm: 3.6, employer: "South City Hospital", qualification: "MBBS, FCPS (Gynecology)", timings: ["Mon 4–8 PM", "Wed 4–8 PM"] },
+  { slug: "faisal-malik", initials: "FM", name: "Dr. Faisal Malik", spec: "Cardiologist", years: 15, rating: 4.8, fee: 2500, online: false, distanceKm: 6.2, employer: "Aga Khan University Hospital", qualification: "MBBS, FCPS (Cardiology)", timings: ["Tue 9 AM–1 PM"] },
+];

@@ -1,0 +1,30 @@
+.rr-container { max-width: 448px; margin: 0 auto; padding: 24px 0; }
+
+.rr-card {
+  border: 1px solid #f1f5f9; border-radius: 16px; padding: 32px; background: white;
+  text-align: center;
+}
+
+.rr-card h2 { font-size: 1.1rem; font-weight: 700; margin: 0 0 4px 0; }
+.rr-subtitle { font-size: 0.9rem; color: #94a3b8; margin-bottom: 24px; }
+
+.rr-thankyou p { font-size: 0.9rem; color: #94a3b8; }
+
+.rr-stars { display: flex; justify-content: center; gap: 4px; margin-bottom: 24px; }
+
+.rr-star-btn { background: none; border: none; cursor: pointer; padding: 0; }
+
+.rr-star { color: #e2e8f0; }
+.rr-star.filled { color: #eab308; fill: #eab308; }
+
+.rr-textarea {
+  width: 100%; border: 1px solid #e2e8f0; border-radius: 8px; padding: 12px;
+  font-size: 0.9rem; margin-bottom: 16px; resize: none; box-sizing: border-box;
+}
+
+.rr-submit-btn {
+  width: 100%; background: #ff2b2b; color: white; border: none; padding: 12px;
+  border-radius: 999px; font-size: 0.9rem; font-weight: 700; cursor: pointer;
+}
+.rr-submit-btn:hover { background: #d61f1f; }
+.rr-submit-btn:disabled { background: #e2e8f0; cursor: not-allowed; }

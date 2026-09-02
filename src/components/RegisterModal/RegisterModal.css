@@ -1,0 +1,43 @@
+.rm-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.5); display: flex; align-items: center; justify-content: center; z-index: 50; padding: 0 20px; }
+.rm-modal { background: white; border-radius: 16px; width: 100%; max-width: 512px; max-height: 90vh; overflow-y: auto; }
+
+.rm-header { position: relative; padding: 24px; border-bottom: 1px solid #f1f5f9; text-align: center; }
+.rm-close-btn { position: absolute; top: 24px; right: 24px; background: none; border: none; color: #94a3b8; cursor: pointer; }
+.rm-close-btn:hover { color: #0f172a; }
+.rm-eyebrow { font-size: 0.9rem; font-weight: 700; color: #ff2b2b; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 8px; }
+.rm-header h3 { font-size: 1.25rem; font-weight: 700; margin-bottom: 8px; }
+.rm-date { font-size: 0.9rem; color: #94a3b8; }
+
+.rm-form { padding: 24px; display: flex; flex-direction: column; gap: 16px; }
+.rm-row-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+
+.rm-form label { display: block; font-size: 0.75rem; font-weight: 600; margin-bottom: 6px; }
+.rm-form input, .rm-form select {
+  width: 100%; border: 1px solid #e2e8f0; border-radius: 8px; padding: 10px 14px;
+  font-size: 0.9rem; box-sizing: border-box; background: white;
+}
+.rm-form input:focus, .rm-form select:focus { outline: none; box-shadow: 0 0 0 3px rgba(0,75,117,0.15); }
+
+.rm-error-input { border-color: #f87171 !important; }
+.rm-error-text { font-size: 0.75rem; color: #dc2626; margin-top: 6px; }
+
+.rm-payment-box { background: rgba(0,75,117,0.05); border: 1px solid rgba(0,75,117,0.15); border-radius: 8px; padding: 16px; }
+.rm-payment-title { font-size: 0.75rem; font-weight: 700; color: #004b75; margin-bottom: 8px; }
+.rm-payment-text { font-size: 0.75rem; color: #475569; line-height: 1.6; }
+.rm-payment-details { margin-top: 10px; font-size: 0.75rem; color: #334155; line-height: 1.6; }
+
+.rm-upload-box {
+  display: flex; align-items: center; gap: 12px; border: 2px dashed #e2e8f0; border-radius: 8px;
+  padding: 16px; cursor: pointer; transition: border-color 0.2s ease; color: #94a3b8;
+}
+.rm-upload-box:hover { border-color: #cbd5e1; }
+.rm-upload-box.error { border-color: #fca5a5; background: #fef2f2; }
+.rm-upload-box.success { border-color: #86efac; background: #f0fdf4; color: #16a34a; }
+.rm-upload-box span { font-size: 0.75rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.rm-hidden-input { display: none; }
+
+.rm-price-row { display: flex; align-items: center; justify-content: space-between; padding-top: 8px; padding-bottom: 4px; border-top: 1px solid #f1f5f9; margin-top: 4px; }
+.rm-price-row span { font-size: 0.9rem; font-weight: 700; }
+
+.rm-submit-btn { width: 100%; background: #ff2b2b; color: white; border: none; padding: 12px; border-radius: 999px; font-size: 0.9rem; font-weight: 700; cursor: pointer; }
+.rm-submit-btn:hover { background: #d61f1f; }

@@ -1,0 +1,143 @@
+.ddc-container {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+.ddc-container > h1 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.ddc-subtitle {
+  font-size: 0.9rem;
+  color: #94a3b8;
+  margin-bottom: 24px;
+}
+
+.ddc-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 24px;
+}
+
+@media (max-width: 768px) {
+  .ddc-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.ddc-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.ddc-match-card {
+  border: 1px solid #f1f5f9;
+  border-radius: 16px;
+  padding: 20px;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.ddc-match-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.ddc-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #004b75;
+  color: white;
+  font-size: 0.85rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ddc-match-name {
+  font-weight: 700;
+  font-size: 0.85rem;
+  color: #0f172a;
+}
+
+.ddc-match-meta {
+  font-size: 0.75rem;
+  color: #64748b;
+}
+
+.ddc-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.ddc-btn-call,
+.ddc-btn-message {
+  width: 36px;
+  height: 36px;
+  border-radius: 999px;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.ddc-btn-call {
+  background: #dcfce7;
+  color: #16a34a;
+}
+
+.ddc-btn-message {
+  background: #f0f7fb;
+  color: #004b75;
+}
+
+.ddc-sidebar {
+  border: 1px solid #f1f5f9;
+  border-radius: 16px;
+  padding: 24px;
+  background: white;
+  height: fit-content;
+  position: sticky;
+  top: 24px;
+  text-align: center;
+}
+
+.ddc-sidebar-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #f0f7fb;
+  color: #004b75;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 12px;
+}
+
+.ddc-sidebar-count {
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: #ff2b2b;
+  margin-bottom: 4px;
+}
+
+.ddc-sidebar-label {
+  font-size: 0.75rem;
+  color: #64748b;
+  margin-bottom: 16px;
+}
+
+.ddc-sidebar-text {
+  font-size: 0.75rem;
+  color: #64748b;
+  margin: 0;
+}

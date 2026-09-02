@@ -7,20 +7,19 @@
 }
 
 body, html, button, input, select, textarea {
-  /* Forces all elements (including Navbar and Heroes) to use your Figma font */
-  font-family: 'Inter', sans-serif !important; 
+  font-family: 'Inter', sans-serif !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-a{
-  text-decoration:none;
+a {
+  text-decoration: none;
 }
 
-li{
-  list-style:none;
+li {
+  list-style: none;
 }
 
-button{
-  cursor:pointer;
+button {
+  cursor: pointer;
 }

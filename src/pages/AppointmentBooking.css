@@ -1,0 +1,86 @@
+.ab-not-found { text-align: center; padding: 96px 0; color: #94a3b8; }
+.ab-container { max-width: 1024px; margin: 0 auto; }
+.ab-back-link { font-size: 0.9rem; color: #94a3b8; text-decoration: none; }
+.ab-back-link:hover { color: #0f172a; }
+
+.ab-steps { display: flex; align-items: center; gap: 8px; margin: 24px 0 32px; max-width: 640px; }
+.ab-step-item { display: flex; align-items: center; gap: 8px; flex: 1; }
+.ab-step-circle {
+  width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center;
+  justify-content: center; font-size: 0.75rem; font-weight: 700; flex-shrink: 0;
+  background: #f1f5f9; color: #cbd5e1;
+}
+.ab-step-circle.active { background: #004b75; color: white; }
+.ab-step-circle.done { background: #16a34a; color: white; }
+.ab-step-label { font-size: 0.75rem; font-weight: 600; color: #cbd5e1; }
+.ab-step-label.active { color: #0f172a; }
+.ab-step-line { flex: 1; height: 1px; background: #f1f5f9; }
+
+.ab-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 24px; }
+@media (max-width: 768px) { .ab-grid { grid-template-columns: 1fr; } }
+
+.ab-card { border: 1px solid #f1f5f9; border-radius: 16px; padding: 24px; background: white; }
+
+.ab-section-heading { display: flex; align-items: center; gap: 8px; margin-bottom: 16px; font-size: 0.9rem; font-weight: 700; }
+.ab-chip-row { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 24px; }
+.ab-chip {
+  padding: 8px 16px; border-radius: 999px; font-size: 0.75rem; font-weight: 600;
+  background: #f8fafc; color: #475569; border: none; cursor: pointer;
+}
+.ab-chip.active { background: #004b75; color: white; }
+
+.ab-time-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-bottom: 24px; }
+.ab-time-chip {
+  padding: 10px; border-radius: 8px; font-size: 0.75rem; font-weight: 600;
+  background: #f8fafc; color: #475569; border: none; cursor: pointer;
+}
+.ab-time-chip.active { background: #ff2b2b; color: white; }
+
+.ab-error { font-size: 0.75rem; color: #dc2626; margin-bottom: 16px; }
+
+.ab-primary-btn {
+  width: 100%; background: #ff2b2b; color: white; border: none; padding: 12px;
+  border-radius: 999px; font-size: 0.9rem; font-weight: 700; cursor: pointer;
+}
+.ab-primary-btn:hover { background: #d61f1f; }
+
+.ab-secondary-btn {
+  width: 100%; background: #004b75; color: white; border: none; padding: 12px;
+  border-radius: 999px; font-size: 0.9rem; font-weight: 700; cursor: pointer;
+}
+
+.ab-payment-options { display: flex; flex-direction: column; gap: 12px; margin-bottom: 24px; }
+.ab-payment-option {
+  display: flex; align-items: flex-start; gap: 12px; padding: 16px; border-radius: 12px;
+  border: 1px solid #e2e8f0; cursor: pointer;
+}
+.ab-payment-option.active { border-color: #004b75; background: #f0f9ff; }
+.ab-payment-title { font-size: 0.9rem; font-weight: 700; }
+.ab-payment-sub { font-size: 0.75rem; color: #94a3b8; }
+
+.ab-card-fields { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-bottom: 24px; }
+.ab-input { border: 1px solid #e2e8f0; border-radius: 8px; padding: 10px 14px; font-size: 0.9rem; }
+.ab-input-full { grid-column: span 2; }
+.ab-input-block { width: 100%; margin-bottom: 24px; }
+
+.ab-mock-note { font-size: 0.75rem; color: #b45309; font-style: italic; margin-bottom: 16px; }
+
+.ab-confirmed { text-align: center; padding: 32px; }
+.ab-confirmed-icon {
+  width: 56px; height: 56px; border-radius: 50%; background: #dcfce7; color: #16a34a;
+  display: flex; align-items: center; justify-content: center; margin: 0 auto 16px;
+}
+.ab-confirmed h2 { font-size: 1.1rem; margin-bottom: 8px; }
+.ab-confirmed p { font-size: 0.9rem; color: #94a3b8; margin-bottom: 24px; }
+
+.ab-sidebar { border: 1px solid #f1f5f9; border-radius: 16px; padding: 24px; background: white; height: fit-content; }
+.ab-doc-header { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; }
+.ab-doc-avatar {
+  width: 48px; height: 48px; border-radius: 50%; background: #004b75; color: white;
+  font-weight: 700; display: flex; align-items: center; justify-content: center;
+}
+.ab-doc-name { font-size: 0.9rem; font-weight: 700; }
+.ab-doc-spec { font-size: 0.75rem; color: #ff2b2b; font-weight: 600; }
+.ab-doc-meta { display: flex; flex-direction: column; gap: 10px; font-size: 0.75rem; color: #94a3b8; border-top: 1px solid #f8fafc; padding-top: 16px; }
+.ab-doc-meta div { display: flex; justify-content: space-between; }
+.ab-doc-meta span:last-child { font-weight: 600; color: #0f172a; }

@@ -1,0 +1,62 @@
+.mm-container { max-width: 1024px; margin: 0 auto; }
+.mm-container > h1 { font-size: 1.25rem; font-weight: 700; margin-bottom: 24px; }
+
+.mm-top-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 24px; margin-bottom: 24px; }
+@media (max-width: 768px) { .mm-top-grid { grid-template-columns: 1fr; } }
+
+.mm-plan-card { border: 1px solid #ff2b2b; border-radius: 16px; padding: 24px; background: white; }
+.mm-active-badge {
+  display: inline-block; font-size: 0.625rem; font-weight: 700; background: #ff2b2b;
+  color: white; padding: 4px 12px; border-radius: 999px;
+}
+.mm-plan-card h2 { font-size: 1.25rem; font-weight: 700; margin: 12px 0 4px 0; }
+.mm-renew-date { font-size: 0.9rem; color: #94a3b8; margin-bottom: 24px; }
+
+.mm-credits-box {
+  background: linear-gradient(135deg, #004b75 0%, #003858 100%);
+  border-radius: 16px; padding: 20px; margin-bottom: 16px; color: white;
+}
+.mm-credits-label { display: flex; align-items: center; gap: 8px; font-size: 0.75rem; font-weight: 600; opacity: 0.7; margin-bottom: 8px; }
+.mm-credits-count { display: flex; align-items: flex-end; gap: 8px; }
+.mm-credits-num { font-size: 2.25rem; font-weight: 700; }
+.mm-credits-count span:last-child { font-size: 0.9rem; opacity: 0.7; margin-bottom: 4px; }
+.mm-credits-used { font-size: 0.75rem; opacity: 0.6; margin-top: 4px; }
+.mm-progress-track { width: 100%; background: rgba(255,255,255,0.2); border-radius: 999px; height: 8px; margin-top: 12px; }
+.mm-progress-fill { background: white; border-radius: 999px; height: 8px; }
+
+.mm-discount-box { background: #f8fafc; border-radius: 12px; padding: 16px; margin-bottom: 24px; }
+.mm-discount-num { font-size: 1.5rem; font-weight: 700; }
+.mm-discount-label { font-size: 0.75rem; color: #94a3b8; }
+
+.mm-change-plan-btn {
+  display: block; width: 100%; text-align: center; background: #f8fafc; color: #004b75;
+  border: none; padding: 12px; border-radius: 999px; font-size: 0.9rem; font-weight: 700;
+  text-decoration: none; box-sizing: border-box;
+}
+.mm-change-plan-btn:hover { background: #e2e8f0; }
+
+.mm-activity-card { border: 1px solid #f1f5f9; border-radius: 16px; padding: 24px; background: white; height: fit-content; }
+.mm-activity-heading { display: flex; align-items: center; gap: 8px; margin-bottom: 16px; }
+.mm-activity-heading h3 { font-size: 0.9rem; font-weight: 700; margin: 0; }
+.mm-activity-list { display: flex; flex-direction: column; gap: 12px; font-size: 0.75rem; }
+.mm-activity-row { display: flex; justify-content: space-between; color: #94a3b8; }
+
+.mm-benefits-card { border: 1px solid #f1f5f9; border-radius: 16px; padding: 24px; background: white; margin-bottom: 24px; }
+.mm-benefits-card h3 { font-size: 0.9rem; font-weight: 700; margin: 0 0 16px 0; }
+.mm-benefits-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+@media (max-width: 480px) { .mm-benefits-grid { grid-template-columns: 1fr; } }
+.mm-benefit { display: flex; align-items: flex-start; gap: 12px; }
+.mm-benefit-icon {
+  width: 36px; height: 36px; border-radius: 8px; background: #f0f9ff; color: #004b75;
+  display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+}
+.mm-benefit-title { font-size: 0.9rem; font-weight: 700; }
+.mm-benefit-desc { font-size: 0.75rem; color: #94a3b8; margin-top: 2px; }
+
+.mm-history-card { border: 1px solid #f1f5f9; border-radius: 16px; padding: 24px; background: white; }
+.mm-history-card h3 { font-size: 0.9rem; font-weight: 700; margin: 0 0 16px 0; }
+.mm-history-row { display: flex; align-items: center; justify-content: space-between; padding: 12px 0; }
+.mm-history-row.bordered { border-bottom: 1px solid #f8fafc; }
+.mm-history-label { font-size: 0.9rem; color: #334155; }
+.mm-history-date { font-size: 0.75rem; color: #94a3b8; margin-top: 2px; }
+.mm-history-amount { display: flex; align-items: center; gap: 4px; font-size: 0.9rem; font-weight: 700; color: #475569; }

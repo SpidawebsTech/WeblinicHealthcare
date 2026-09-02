@@ -1,0 +1,18 @@
+.rx-container { max-width: 720px; margin: 0 auto; }
+.rx-list { display: flex; flex-direction: column; gap: 16px; }
+
+.rx-card { border: 1px solid #f1f5f9; border-radius: 16px; padding: 24px; background: white; }
+
+.rx-card-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px; }
+.rx-doctor { display: flex; align-items: center; gap: 8px; font-size: 0.9rem; font-weight: 700; }
+.rx-date { font-size: 0.75rem; color: #94a3b8; }
+
+.rx-items { display: flex; flex-direction: column; gap: 8px; margin-bottom: 16px; }
+.rx-item { display: flex; align-items: flex-start; gap: 8px; font-size: 0.9rem; color: #0f172a; }
+.rx-item svg { color: #ff2b2b; margin-top: 2px; flex-shrink: 0; }
+
+.rx-download-btn {
+  display: flex; align-items: center; gap: 8px; font-size: 0.9rem; font-weight: 700;
+  color: #004b75; background: none; border: none; cursor: pointer; padding: 0;
+}
+.rx-download-btn:hover { color: #003858; }

@@ -1,0 +1,111 @@
+.at-container {
+  max-width: 896px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 24px;
+}
+
+@media (max-width: 768px) {
+  .at-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+.at-main {
+  border: 1px solid #f1f5f9;
+  border-radius: 16px;
+  padding: 24px;
+  background: white;
+  text-align: center;
+}
+
+.at-map-placeholder {
+  width: 100%;
+  height: 192px;
+  background: #f0f7fb;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #a8c3d4;
+  margin-bottom: 20px;
+}
+
+.at-driver-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.at-driver-info {
+  text-align: left;
+}
+
+.at-driver-name {
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.at-eta {
+  font-size: 0.75rem;
+  color: #94a3b8;
+}
+
+.at-call-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #dcfce7;
+  color: #16a34a;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.at-status {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 0.75rem;
+  color: #94a3b8;
+}
+
+.at-sidebar {
+  border: 1px solid #f1f5f9;
+  border-radius: 16px;
+  padding: 24px;
+  background: white;
+  height: fit-content;
+}
+
+.at-sidebar h3 {
+  font-size: 0.9rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.at-details-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  font-size: 0.75rem;
+}
+
+.at-detail-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.at-detail-row > span:first-child {
+  color: #94a3b8;
+}
+
+.at-detail-value {
+  font-weight: 600;
+}
