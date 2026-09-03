@@ -1,9 +1,11 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import DashboardLayout from "../../layouts/DashboardLayout/DashboardLayout";
-import { FiUser, FiHeart, FiAlertTriangle, FiPhone, FiSave, FiCheckCircle, FiEdit3 } from "react-icons/fi";
+import { FiUser, FiHeart, FiAlertTriangle, FiPhone, FiSave, FiCheckCircle, FiEdit3, FiChevronRight } from "react-icons/fi";
 import "./PatientProfile.css";
 
 function PatientProfile() {
+  const navigate = useNavigate();
   const [profile, setProfile] = useState({
     fullName: "Noor Ul Ain",
     email: "noor@example.com",
@@ -64,6 +66,30 @@ function PatientProfile() {
             <FiCheckCircle size={18} /> Profile details updated and saved!
           </div>
         )}
+
+        <div
+          onClick={() => navigate("/prescriptions")}
+          style={{
+            cursor: "pointer",
+            background: "white",
+            border: "1px solid #f1f5f9",
+            borderRadius: "16px",
+            padding: "20px 24px",
+            marginBottom: "20px",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "space-between",
+            transition: "border-color 0.2s ease",
+          }}
+        >
+          <div>
+            <h3 style={{ margin: 0, fontSize: "1rem" }}>My Prescriptions</h3>
+            <p style={{ margin: "4px 0 0", color: "#94a3b8", fontSize: "0.85rem" }}>
+              View and download prescriptions issued by your doctors
+            </p>
+          </div>
+          <FiChevronRight size={20} color="#94a3b8" />
+        </div>
 
         <form onSubmit={handleSubmit} className="profile-form">
           <div className="form-section">

@@ -13,7 +13,8 @@ import {
   FiSettings,
   FiLogOut,
   FiBell,
-  FiAlertCircle
+  FiAlertCircle,
+  FiMessageSquare
 } from "react-icons/fi";
 import logo from "../../assets/images/logo.png";
 import { Link } from "react-router-dom";
@@ -57,7 +58,7 @@ function DashboardLayout({ children }) {
           </NavLink>
 
           <NavLink to="/dashboard/second-opinion" className={({ isActive }) => isActive ? "menu-item active" : "menu-item"}>
-            <FiShield /> Second Opinion
+            <FiMessageSquare /> Second Opinion
           </NavLink>
 
           <NavLink to="/billing-history" className={({ isActive }) => isActive ? "menu-item active" : "menu-item"}>
