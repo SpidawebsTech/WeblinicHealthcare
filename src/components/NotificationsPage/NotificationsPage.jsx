@@ -1,16 +1,17 @@
 import React, { useState } from 'react';
+import { useNavigate } from "react-router-dom";
 import './NotificationsPage.css';
 import {FiBell} from "react-icons/fi";
 
 const initialNotifications = [
   {
-    id: 1,
-    type: 'lab_order',
-    title: 'Lab Order Ready',
-    message: 'Your Blood Panel & Lipid Profile results are ready for review.',
-    timestamp: '10 mins ago',
-    read: false,
-    labOrderId: 'LAB-8921',
+  id: 1,
+  type: 'lab_order',
+  title: 'Lab Order Ready',
+  message: 'A new lab result is ready for review.',
+  timestamp: '10 mins ago',
+  read: false,
+  labOrderId: 'LAB-8921',
   },
   {
     id: 2,
@@ -22,13 +23,13 @@ const initialNotifications = [
     labOrderId: null,
   },
   {
-    id: 3,
-    type: 'lab_order',
-    title: 'Lab Order Processing',
-    message: 'Urinalysis Test (LAB-7043) sample has been received by the lab.',
-    timestamp: '1 day ago',
-    read: true,
-    labOrderId: 'LAB-7043',
+  id: 3,
+  type: 'lab_order',
+  title: 'Lab Order Processing',
+  message: 'Your lab sample has been received and is being processed.',
+  timestamp: '1 day ago',
+  read: true,
+  labOrderId: 'LAB-7043',
   },
   {
     id: 4,
@@ -39,9 +40,19 @@ const initialNotifications = [
     read: true,
     labOrderId: null,
   },
+  {
+  id: 5,
+  type: 'prescription',
+  title: 'New Prescription',
+  message: 'Dr. Mehreen Fatima has issued a new prescription for you.',
+  timestamp: '5 hours ago',
+  read: false,
+  labOrderId: null,
+  },
 ];
 
 export default function NotificationsPage() {
+  const navigate = useNavigate();
   const [notifications, setNotifications] = useState(initialNotifications);
   const [filter, setFilter] = useState('all'); 
 
@@ -55,10 +66,16 @@ export default function NotificationsPage() {
     setNotifications((prev) => prev.map((item) => ({ ...item, read: true })));
   };
 
-  const handleViewLabOrder = (e, labOrderId, notifId) => {
-    e.stopPropagation();
-    markAsRead(notifId);
-    alert(`Redirecting to Lab Order View Page for Order #${labOrderId}`);
+  const handleViewLabOrder = (e, notifId) => {
+  e.stopPropagation();
+  markAsRead(notifId);
+  navigate("/lab-orders");
+  };
+
+  const handleViewPrescription = (e, notifId) => {
+  e.stopPropagation();
+  markAsRead(notifId);
+  navigate("/prescriptions");
   };
 
   const filteredNotifications = notifications.filter((notif) => {
@@ -121,6 +138,7 @@ export default function NotificationsPage() {
                 <span className={`notif-icon ${notif.type}`}>
                   {notif.type === 'lab_order' && '🧪'}
                   {notif.type === 'appointment' && '📅'}
+                  {notif.type === 'prescription' && '💊'}
                   {notif.type === 'system' && '⚙️'}
                 </span>
               </div>
@@ -134,11 +152,16 @@ export default function NotificationsPage() {
 
                 {notif.type === 'lab_order' && notif.labOrderId && (
                   <div className="notif-actions">
-                    <button
-                      className="btn-lab-view"
-                      onClick={(e) => handleViewLabOrder(e, notif.labOrderId, notif.id)}
-                    >
-                      View Lab Order #{notif.labOrderId} &rarr;
+                    <button className="btn-lab-view" onClick={(e) => handleViewLabOrder(e, notif.id)}>
+                      View Lab Orders &rarr;
+                    </button>
+                  </div>
+                )}
+
+                {notif.type === 'prescription' && (
+                  <div className="notif-actions">
+                    <button className="btn-lab-view" onClick={(e) => handleViewPrescription(e, notif.id)}>
+                      View Prescription &rarr;
                     </button>
                   </div>
                 )}

@@ -13,7 +13,8 @@ import {
   FiSettings,
   FiLogOut,
   FiBell,
-  FiAlertCircle
+  FiAlertCircle,
+  FiMessageSquare
 } from "react-icons/fi";
 import logo from "../../assets/images/logo.png";
 import { Link } from "react-router-dom";
@@ -57,7 +58,7 @@ function DashboardLayout({ children }) {
           </NavLink>
 
           <NavLink to="/dashboard/second-opinion" className={({ isActive }) => isActive ? "menu-item active" : "menu-item"}>
-            <FiShield /> Second Opinion
+            <FiMessageSquare /> Second Opinion
           </NavLink>
 
           <NavLink to="/billing-history" className={({ isActive }) => isActive ? "menu-item active" : "menu-item"}>
@@ -77,7 +78,7 @@ function DashboardLayout({ children }) {
           <FiAlertCircle className="emergency-icon" />
           <h4>Emergency?</h4>
           <p>Book instant ambulance or blood request</p>
-          <button onClick={() => navigate("/dashboard/services")}>Request Help</button>
+          <button onClick={() => navigate("/ambulance/emergency")}>Request Help</button>
         </div>
 
         <div className="sidebar-footer">

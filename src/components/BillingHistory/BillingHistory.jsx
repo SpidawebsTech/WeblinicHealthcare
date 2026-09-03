@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from "react-router-dom";
 import './BillingHistory.css';
 import { 
   CreditCard, 
@@ -237,6 +238,21 @@ export default function BillingPlans() {
                 </div>
               </div>
             </div>
+          </div>
+          
+          {/* Quick Membership Info */}
+          <div className="weblinic-card insurance-summary-card">
+            <div className="insurance-header">
+              <span className="insurance-tag">Active Plan</span>
+              <h4>Plus Membership</h4>
+            </div>
+            <div className="insurance-info">
+              <p>Consultations left: <span>3 of 5</span></p>
+              <p>Renews: <span>Sep 12, 2026</span></p>
+            </div>
+            <Link to="/my-membership" className="insurance-link">
+              View My Membership <ChevronRight size={16} />
+            </Link> 
           </div>
 
           {/* Quick Insurance Info */}
