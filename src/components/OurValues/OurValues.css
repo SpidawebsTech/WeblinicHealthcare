@@ -1,0 +1,61 @@
+.ov-section { padding: 64px 32px; background: #f8fafc; }
+
+.ov-header { max-width: 896px; margin: 0 auto 44px; text-align: center; }
+
+.ov-divider-row { display: flex; align-items: center; justify-content: center; gap: 8px; margin-bottom: 12px; }
+.ov-divider-line { width: 32px; height: 1px; background: #e2e8f0; }
+.ov-divider-dot { width: 6px; height: 6px; border-radius: 50%; background: #ff2b2b; }
+
+.ov-header h2 { font-size: 1.5rem; font-weight: 700; margin-bottom: 8px; }
+.ov-header p { font-size: 0.9rem; color: #94a3b8; }
+
+.ov-grid {
+  max-width: 1152px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+@media (max-width: 768px) { .ov-grid { grid-template-columns: 1fr; } }
+
+.ov-card {
+  position: relative;
+  background: white;
+  border: 1px solid #f1f5f9;
+  border-radius: 16px;
+  box-shadow: 0 8px 28px rgba(15, 76, 129, 0.06);
+  cursor: pointer;
+  overflow: hidden;
+  transition: height 0.5s ease-in-out;
+  height: 220px;
+}
+
+.ov-card.open { height: 340px; }
+
+.ov-collapsed {
+  position: absolute; inset: 0; display: flex; flex-direction: column;
+  align-items: center; justify-content: center; text-align: center;
+  padding: 0 36px; transition: opacity 0.3s ease; opacity: 1;
+}
+.ov-collapsed.hidden { opacity: 0; pointer-events: none; }
+
+.ov-expanded {
+  position: absolute; inset: 0; padding: 36px; display: flex;
+  flex-direction: column; height: 100%; transition: opacity 0.5s ease 0.15s; opacity: 0; pointer-events: none;
+}
+.ov-expanded.visible { opacity: 1; pointer-events: auto; }
+
+.ov-icon-box {
+  width: 56px; height: 56px; border-radius: 50%; background: #f0f9ff; color: #004b75;
+  display: flex; align-items: center; justify-content: center; margin-bottom: 20px;
+}
+
+.ov-card h3 { font-size: 1rem; font-weight: 700; margin-bottom: 12px; }
+
+.ov-expanded p { font-size: 0.9rem; color: #94a3b8; line-height: 1.6; text-align: justify; }
+
+.ov-hint-wrap { margin-top: auto; }
+
+.ov-hint { font-size: 0.75rem; font-weight: 600; display: flex; align-items: center; gap: 6px; }
+.ov-collapse-hint { margin-top: 20px; color: #004b75; }

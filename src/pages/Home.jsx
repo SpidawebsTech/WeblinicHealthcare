@@ -15,7 +15,7 @@ function Home() {
       <Services />
       <HowItWorks />
       <Feedback />
-      < Blog/>
+      <Blog />
       <DoctorCTA />
       <Footer />
     </>

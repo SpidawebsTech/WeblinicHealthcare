@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Contact from "./pages/Contact";
@@ -18,8 +18,8 @@ import SampleCollectionScheduling from "./components/SampleCollectionScheduling/
 import SecondOpinion from "./components/SecondOpinion/SecondOpinion";
 import HomeHealthRequest from "./components/HomeHealthRequest/HomeHealthRequest";
 import HomeHealthTracker from "./components/HomeHealthTracker/HomeHealthTracker";
-import AddInsurancePolicy from './components/AddInsurancePolicy/AddInsurancePolicy';
-import InsuranceClaimsTracker from './components/InsuranceClaimsTracker/InsuranceClaimsTracker';
+import AddInsurancePolicy from "./components/AddInsurancePolicy/AddInsurancePolicy";
+import InsuranceClaimsTracker from "./components/InsuranceClaimsTracker/InsuranceClaimsTracker";
 import NotificatonsPage from "./components/NotificationsPage/NotificationsPage";
 import BillingHistory from "./components/BillingHistory/BillingHistory";
 import AccountSettings from "./components/AccountSettings/AccountSettings";
@@ -33,18 +33,34 @@ import DoctorProfileSettings from "./components/DoctorProfileSettings/DoctorProf
 import SecondOpinionQueue from "./components/SecondOpinionQueue/SecondOpinionQueue";
 import ScrollToTop from "./components/ScrollToTop";
 
-const MedicalRecords = () => <h2>Medical Records & Diagnostic History Hub</h2>;
-const PharmacyHub = () => <h2>E-Pharmacy Hub</h2>;
-const LabDiagnostics = () => <h2>Lab & Diagnostics Hub</h2>;
-const CareEmergency = () => <h2>Home Health, Ambulance & Blood Bank Hub</h2>;
-const BillingPlans = () => <h2>Memberships & Insurance Hub</h2>;
-const SettingsPage = () => <h2>Account Settings</h2>;
+import About from "./pages/About";
+import Trainings from "./pages/Trainings";
+import Partnerships from "./pages/Partnerships";
+import DoctorSearch from "./pages/DoctorSearch";
+import DoctorProfile from "./pages/DoctorProfile";
+import AppointmentBooking from "./pages/AppointmentBooking";
+import MyAppointments from "./pages/MyAppointments";
+import PrescriptionView from "./pages/PrescriptionView";
+import LabOrderView from "./pages/LabOrderView";
+import ReviewRating from "./pages/ReviewRating";
+import MembershipPlans from "./pages/MembershipPlans";
+import MembershipCheckout from "./pages/MembershipCheckout";
+import MyMembership from "./pages/MyMembership";
+import BloodRequestBlood from "./pages/BloodRequestBlood";
+import BloodBecomeDonor from "./pages/BloodBecomeDonor";
+import DonorDirectConnect from "./pages/DonorDirectConnect";
+import AmbulanceEmergency from "./pages/AmbulanceEmergency";
+import AmbulanceScheduled from "./pages/AmbulanceScheduled";
+import AmbulanceTracking from "./pages/AmbulanceTracking";
+import CareEmergency from "./pages/CareEmergency";
+import BuyCredits from "./pages/BuyCredits";
 
 function App() {
   return (
-    <BrowserRouter>
-    <ScrollToTop />
+    <>
+      <ScrollToTop />
       <Routes>
+        {/* Noor's routes */}
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/contact" element={<Contact />} />
@@ -61,7 +77,6 @@ function App() {
         <Route path="/dashboard/labs" element={<LabTestCatalog />} />
         <Route path="/dashboard/lab-results" element={<LabResults />} />
         <Route path="/dashboard/labs/checkout" element={<SampleCollectionScheduling />} />
-        <Route path="/dashboard/lab-results" element={<LabResults />} />
         <Route path="/dashboard/second-opinion" element={<SecondOpinion />} />
         <Route path="/dashboard/homehealth" element={<HomeHealthRequest />} />
         <Route path="/dashboard/homehealth-track" element={<HomeHealthTracker />} />
@@ -69,17 +84,40 @@ function App() {
         <Route path="/insurance/claims" element={<InsuranceClaimsTracker />} />
         <Route path="/notifications" element={<NotificatonsPage />} />
         <Route path="/billing-history" element={<BillingHistory />} />
-        <Route path="/settings" element={<AccountSettings/>} />
+        <Route path="/settings" element={<AccountSettings />} />
         <Route path="/doctor/dashboard" element={<DoctorDashboard />} />
         <Route path="/doctor/schedule" element={<ScheduleManagement />} />
         <Route path="/doctor/prescriptionentry" element={<PrescriptionEntry />} />
-        <Route path="lab-order" element={<LabOrderCreation />} />
+        <Route path="/lab-order" element={<LabOrderCreation />} />
         <Route path="/records" element={<PatientRecords />} />
         <Route path="/earnings" element={<Earnings />} />
         <Route path="/doctor-settings" element={<DoctorProfileSettings />} />
         <Route path="/second-opinion-queue" element={<SecondOpinionQueue />} />
+
+        {/* Soha's routes */}
+        <Route path="/about" element={<About />} />
+        <Route path="/trainings" element={<Trainings />} />
+        <Route path="/partnerships" element={<Partnerships />} />
+        <Route path="/doctors" element={<DoctorSearch />} />
+        <Route path="/doctors/:slug" element={<DoctorProfile />} />
+        <Route path="/book/:slug" element={<AppointmentBooking />} />
+        <Route path="/appointments" element={<MyAppointments />} />
+        <Route path="/prescriptions" element={<PrescriptionView />} />
+        <Route path="/lab-orders" element={<LabOrderView />} />
+        <Route path="/review/:appointmentId" element={<ReviewRating />} />
+        <Route path="/membership" element={<MembershipPlans />} />
+        <Route path="/membership/checkout/:planId" element={<MembershipCheckout />} />
+        <Route path="/my-membership" element={<MyMembership />} />
+        <Route path="/blood/request" element={<BloodRequestBlood />} />
+        <Route path="/blood/donate" element={<BloodBecomeDonor />} />
+        <Route path="/blood/connect" element={<DonorDirectConnect />} />
+        <Route path="/ambulance/emergency" element={<AmbulanceEmergency />} />
+        <Route path="/ambulance/scheduled" element={<AmbulanceScheduled />} />
+        <Route path="/ambulance/tracking" element={<AmbulanceTracking />} />
+        <Route path="/care" element={<CareEmergency />} />
+        <Route path="/wallet" element={<BuyCredits />} />
       </Routes>
-    </BrowserRouter>
+    </>
   );
 }
 

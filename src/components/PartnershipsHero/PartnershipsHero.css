@@ -1,0 +1,65 @@
+.ph-hero {
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  padding: 64px 48px 56px;
+  background: linear-gradient(135deg, #004b75 0%, #003858 100%);
+}
+
+.ph-blur-circle-1 {
+  position: absolute;
+  width: 340px;
+  height: 340px;
+  top: -160px;
+  right: -100px;
+  background: rgba(255, 255, 255, 0.06);
+  filter: blur(10px);
+  border-radius: 50%;
+}
+
+.ph-blur-circle-2 {
+  position: absolute;
+  width: 240px;
+  height: 240px;
+  bottom: -100px;
+  left: -60px;
+  background: rgba(255, 43, 43, 0.15);
+  filter: blur(30px);
+  border-radius: 50%;
+}
+
+.ph-content {
+  position: relative;
+  z-index: 1;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.ph-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: white;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 8px 18px;
+  border-radius: 999px;
+  margin-bottom: 20px;
+}
+
+.ph-content h1 {
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: white;
+  margin-bottom: 16px;
+}
+
+.ph-content p {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.75);
+  max-width: 640px;
+  margin: 0 auto;
+  line-height: 1.6;
+  text-align: center;
+}

@@ -1,0 +1,61 @@
+.ah-hero {
+  position: relative;
+  text-align: center;
+  padding: 0 32px;
+  background-size: cover;
+  background-position: center;
+  min-height: 480px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ah-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 25, 59, 0.7);
+}
+
+.ah-content {
+  position: relative;
+  z-index: 1;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.ah-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #ff2b2b;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 16px;
+}
+
+.ah-title {
+  font-size: 2.25rem;
+  font-weight: 800;
+  line-height: 1.3;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.ah-title-accent {
+  color: #ff2b2b;
+}
+
+.ah-subtitle {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.6;
+  max-width: 560px;
+  margin: 0 auto;
+  text-align: justify;
+}
+
+@media (max-width: 640px) {
+  .ah-title { font-size: 1.75rem; }
+}

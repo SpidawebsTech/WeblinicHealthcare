@@ -1,0 +1,50 @@
+.mp-container { max-width: 1024px; margin: 0 auto; }
+
+.mp-header-row { display: flex; align-items: center; justify-content: space-between; margin-bottom: 4px; }
+.mp-header-row h1 { font-size: 1.25rem; font-weight: 700; margin: 0; }
+.mp-wallet-link { font-size: 0.75rem; font-weight: 700; color: #004b75; text-decoration: none; }
+.mp-wallet-link:hover { color: #003858; }
+
+.mp-subtitle { font-size: 0.9rem; color: #94a3b8; margin-bottom: 24px; }
+
+.mp-plans-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-bottom: 32px; }
+@media (max-width: 768px) { .mp-plans-grid { grid-template-columns: 1fr; } }
+
+.mp-plan-card {
+  position: relative; border: 1px solid #f1f5f9; border-radius: 16px; padding: 24px; background: white;
+}
+.mp-plan-card.popular { border-color: #ff2b2b; box-shadow: 0 10px 25px rgba(255, 43, 43, 0.1); }
+
+.mp-popular-badge {
+  position: absolute; top: -12px; left: 50%; transform: translateX(-50%);
+  background: #ff2b2b; color: white; font-size: 0.625rem; font-weight: 700;
+  padding: 4px 12px; border-radius: 999px;
+}
+
+.mp-plan-card h3 { font-size: 1.1rem; font-weight: 700; margin: 0 0 4px 0; }
+
+.mp-price-block { margin-bottom: 16px; }
+.mp-price-row { display: flex; align-items: center; gap: 6px; color: #004b75; }
+.mp-price { font-size: 1.5rem; font-weight: 700; color: #0f172a; }
+.mp-period { font-size: 0.75rem; color: #94a3b8; }
+
+.mp-perks { display: flex; flex-direction: column; gap: 10px; margin-bottom: 24px; }
+.mp-perk { display: flex; align-items: flex-start; gap: 8px; font-size: 0.9rem; }
+.mp-perk svg { color: #16a34a; margin-top: 2px; flex-shrink: 0; }
+
+.mp-choose-btn {
+  display: block; width: 100%; text-align: center; font-size: 0.9rem; font-weight: 700;
+  padding: 12px; border-radius: 999px; text-decoration: none; box-sizing: border-box;
+  background: #f8fafc; color: #004b75;
+}
+.mp-choose-btn:hover { background: #e2e8f0; }
+.mp-choose-btn.popular { background: #ff2b2b; color: white; }
+.mp-choose-btn.popular:hover { background: #d61f1f; }
+
+.mp-faq-card { border: 1px solid #f1f5f9; border-radius: 16px; padding: 24px; background: white; }
+.mp-faq-heading { display: flex; align-items: center; gap: 8px; margin-bottom: 16px; }
+.mp-faq-heading h3 { font-size: 0.9rem; font-weight: 700; margin: 0; }
+
+.mp-faq-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; font-size: 0.75rem; color: #64748b; }
+@media (max-width: 480px) { .mp-faq-grid { grid-template-columns: 1fr; } }
+.mp-faq-q { font-weight: 600; color: #334155; margin-bottom: 4px; }

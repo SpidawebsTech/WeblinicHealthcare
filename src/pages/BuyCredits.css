@@ -1,0 +1,281 @@
+.bc-success-wrap {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 48px 20px;
+}
+
+.bc-success-card {
+  text-align: center;
+  border: 1px solid #f1f5f9;
+  border-radius: 16px;
+  padding: 40px;
+  background: white;
+}
+
+.bc-success-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #dcfce7;
+  color: #16a34a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px;
+}
+
+.bc-success-card h2 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.bc-success-card p {
+  font-size: 0.9rem;
+  color: #94a3b8;
+  margin-bottom: 24px;
+}
+
+.bc-goto-btn {
+  width: 100%;
+  background: #004b75;
+  color: white;
+  border: none;
+  font-size: 0.9rem;
+  font-weight: 700;
+  padding: 12px;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.bc-goto-btn:hover {
+  background: #003a5c;
+}
+
+.bc-container {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+.bc-container > h1 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.bc-subtitle {
+  font-size: 0.9rem;
+  color: #94a3b8;
+  margin-bottom: 24px;
+}
+
+.bc-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 24px;
+}
+
+@media (max-width: 768px) {
+  .bc-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.bc-main {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.bc-card {
+  border: 1px solid #f1f5f9;
+  border-radius: 16px;
+  padding: 24px;
+  background: white;
+}
+
+.bc-step-heading {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.bc-step-num {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #f0f7fb;
+  color: #004b75;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.bc-step-heading h3 {
+  font-size: 0.9rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.bc-amount-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+@media (max-width: 640px) {
+  .bc-amount-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.bc-amount-btn {
+  text-align: left;
+  padding: 16px;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  background: white;
+  cursor: pointer;
+}
+
+.bc-amount-btn.active {
+  border-color: #004b75;
+  background: #f0f7fb;
+}
+
+.bc-amount-value {
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.bc-amount-bonus {
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: #16a34a;
+  margin-top: 4px;
+}
+
+.bc-payment-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.bc-payment-option {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 16px;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  cursor: pointer;
+}
+
+.bc-payment-option.active {
+  border-color: #004b75;
+  background: #f0f7fb;
+}
+
+.bc-payment-option input {
+  margin-top: 2px;
+  accent-color: #004b75;
+}
+
+.bc-payment-title {
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.bc-payment-desc {
+  font-size: 0.75rem;
+  color: #94a3b8;
+}
+
+.bc-payment-note {
+  font-size: 0.75rem;
+  color: #d97706;
+  font-style: italic;
+  margin-top: 16px;
+}
+
+.bc-sidebar {
+  border: 1px solid #f1f5f9;
+  border-radius: 16px;
+  padding: 24px;
+  background: white;
+  height: fit-content;
+  position: sticky;
+  top: 24px;
+}
+
+.bc-summary-heading {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 16px;
+  color: #94a3b8;
+}
+
+.bc-summary-heading h3 {
+  font-size: 0.9rem;
+  font-weight: 700;
+  margin: 0;
+  color: #0f172a;
+}
+
+.bc-summary-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  margin-bottom: 8px;
+  color: #94a3b8;
+}
+
+.bc-summary-value {
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.bc-summary-bonus {
+  font-weight: 600;
+  color: #16a34a;
+}
+
+.bc-summary-total {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  padding-top: 8px;
+  border-top: 1px solid #f1f5f9;
+  margin-top: 8px;
+  margin-bottom: 20px;
+  color: #94a3b8;
+}
+
+.bc-summary-total-value {
+  font-weight: 700;
+  color: #ff2b2b;
+}
+
+.bc-confirm-btn {
+  width: 100%;
+  background: #004b75;
+  color: white;
+  border: none;
+  font-size: 0.9rem;
+  font-weight: 700;
+  padding: 12px;
+  border-radius: 999px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.bc-confirm-btn:hover {
+  background: #003a5c;
+}
