@@ -24,51 +24,51 @@ function Header() {
   const closeDropdowns = () => setActiveDropdown(null);
 
   return (
-    <header className="header-wrapper">
-      <div className="top-utility-bar">
-        <div className="utility-container">
-          <div className="utility-left">
-            <a href="tel:+18001234567" className="utility-item">
-              <FiPhone className="icon" /> +1 (800) 123-4567
+    <header className="wn-header-wrapper">
+      <div className="wn-top-utility-bar">
+        <div className="wn-utility-container">
+          <div className="wn-utility-left">
+            <a href="tel:+18001234567" className="wn-utility-item">
+              <FiPhone className="wn-icon" /> +1 (800) 123-4567
             </a>
-            <a href="https://wa.me/18001234567" target="_blank" rel="noreferrer" className="utility-item whatsapp">
-              <FaWhatsapp className="icon" /> WhatsApp Support
+            <a href="https://wa.me/18001234567" target="_blank" rel="noreferrer" className="wn-utility-item whatsapp">
+              <FaWhatsapp className="wn-icon" /> WhatsApp Support
             </a>
-            <a href="mailto:support@weblinic.com" className="utility-item">
-              <FiMail className="icon" /> support@weblinic.com
+            <a href="mailto:support@weblinic.com" className="wn-utility-item">
+              <FiMail className="wn-icon" /> support@weblinic.com
             </a>
-            <span className="utility-item">
-              <FiClock className="icon" /> Mon - Sat: 8:00 AM - 10:00 PM
+            <span className="wn-utility-item">
+              <FiClock className="wn-icon" /> Mon - Sat: 8:00 AM - 10:00 PM
             </span>
           </div>
 
-          <div className="utility-right">
-            <a href="/register/patient" className="utility-link">
+          <div className="wn-utility-right">
+            <a href="/register/patient" className="wn-utility-link">
               <FiUser size={12} /> Patient Registration
             </a>
-            <span className="divider">|</span>
-            <a href="/register/doctor" className="utility-link doctor-reg">
+            <span>|</span>
+            <a href="/register/doctor" className="wn-utility-link doctor-reg">
               <FiUserCheck size={12} /> Doctor Registration
             </a>
           </div>
         </div>
       </div>
 
-      <nav className="main-navbar" onMouseLeave={closeDropdowns}>
-        <div className="navbar-container">
+      <nav className="wn-main-navbar" onMouseLeave={closeDropdowns}>
+        <div className="wn-navbar-container">
 
-          <a href="/" className="navbar-logo">
-            <img src={logo} alt="Weblinic Logo" className="logo-img" />
+          <a href="/" className="wn-navbar-logo">
+            <img src={logo} alt="Weblinic Logo" className="wn-logo-img" />
             <h2>Weblinic Healthcare</h2>
           </a>
 
-          <ul className="nav-menu">
-            <li className="nav-item" onMouseEnter={() => toggleDropdown("patients")}>
-              <button className="nav-link">
-                Patients <FiChevronDown className={`arrow ${activeDropdown === "patients" ? "open" : ""}`} />
+          <ul className="wn-nav-menu">
+            <li className="wn-nav-item" onMouseEnter={() => toggleDropdown("patients")}>
+              <button className="wn-nav-link">
+                Patients <FiChevronDown className={`wn-arrow ${activeDropdown === "patients" ? "open" : ""}`} />
               </button>
               {activeDropdown === "patients" && (
-                <div className="dropdown-menu">
+                <div className="wn-dropdown-menu">
                   <a href="/register/patient">Patient Registration</a>
                   <a href="/doctors">Find a Doctor</a>
                   <a href="/book">Book Appointment</a>
@@ -79,12 +79,12 @@ function Header() {
               )}
             </li>
 
-            <li className="nav-item" onMouseEnter={() => toggleDropdown("services")}>
-              <button className="nav-link">
-                Services <FiChevronDown className={`arrow ${activeDropdown === "services" ? "open" : ""}`} />
+            <li className="wn-nav-item" onMouseEnter={() => toggleDropdown("services")}>
+              <button className="wn-nav-link">
+                Services <FiChevronDown className={`wn-arrow ${activeDropdown === "services" ? "open" : ""}`} />
               </button>
               {activeDropdown === "services" && (
-                <div className="dropdown-menu">
+                <div className="wn-dropdown-menu">
                   <a href="/services/consultation">Consultation</a>
                   <a href="/services/home-health">Home Health</a>
                   <a href="/services/diagnostics">Diagnostics</a>
@@ -93,24 +93,24 @@ function Header() {
               )}
             </li>
 
-            <li className="nav-item" onMouseEnter={() => toggleDropdown("doctors")}>
-              <button className="nav-link">
-                Doctors <FiChevronDown className={`arrow ${activeDropdown === "doctors" ? "open" : ""}`} />
+            <li className="wn-nav-item" onMouseEnter={() => toggleDropdown("doctors")}>
+              <button className="wn-nav-link">
+                Doctors <FiChevronDown className={`wn-arrow ${activeDropdown === "doctors" ? "open" : ""}`} />
               </button>
               {activeDropdown === "doctors" && (
-                <div className="dropdown-menu">
+                <div className="wn-dropdown-menu">
                   <a href="/doctors/browse">Browse Doctors</a>
                   <a href="/doctors/featured">Featured Specialists</a>
                 </div>
               )}
             </li>
 
-            <li className="nav-item" onMouseEnter={() => toggleDropdown("library")}>
-              <button className="nav-link">
-                Health Library <FiChevronDown className={`arrow ${activeDropdown === "library" ? "open" : ""}`} />
+            <li className="wn-nav-item" onMouseEnter={() => toggleDropdown("library")}>
+              <button className="wn-nav-link">
+                Health Library <FiChevronDown className={`wn-arrow ${activeDropdown === "library" ? "open" : ""}`} />
               </button>
               {activeDropdown === "library" && (
-                <div className="dropdown-menu">
+                <div className="wn-dropdown-menu">
                   <a href="/library/articles">Articles</a>
                   <a href="/library/guides">Disease Guides</a>
                   <a href="/library/symptoms">Symptoms Checker</a>
@@ -122,29 +122,29 @@ function Header() {
               )}
             </li>
 
-            <li className="nav-item" onMouseEnter={() => toggleDropdown("about")}>
-              <button className="nav-link">
-                About <FiChevronDown className={`arrow ${activeDropdown === "about" ? "open" : ""}`} />
+            <li className="wn-nav-item" onMouseEnter={() => toggleDropdown("about")}>
+              <button className="wn-nav-link">
+                About <FiChevronDown className={`wn-arrow ${activeDropdown === "about" ? "open" : ""}`} />
               </button>
               {activeDropdown === "about" && (
-                <div className="dropdown-menu">
+                <div className="wn-dropdown-menu">
                   <a href="/about">About Us</a>
                   <a href="/about/mission">Our Mission</a>
                   <a href="/about/team">Our Team</a>
                   <a href="/careers">Careers</a>
-                  <Link to="/media" className="nav-link">
+                  <Link to="/media" className="wn-nav-link">
                     Media Center
                   </Link>
                 </div>
               )}
             </li>
 
-            <li className="nav-item" onMouseEnter={() => toggleDropdown("contact")}>
-              <button className="nav-link">
-                Contact <FiChevronDown className={`arrow ${activeDropdown === "contact" ? "open" : ""}`} />
+            <li className="wn-nav-item" onMouseEnter={() => toggleDropdown("contact")}>
+              <button className="wn-nav-link">
+                Contact <FiChevronDown className={`wn-arrow ${activeDropdown === "contact" ? "open" : ""}`} />
               </button>
               {activeDropdown === "contact" && (
-                <div className="dropdown-menu">
+                <div className="wn-dropdown-menu">
                   <a href="/contact">Contact Us</a>
                   <a href="/support">Support</a>
                   <a href="/feedback">Feedback</a>
@@ -153,20 +153,20 @@ function Header() {
             </li>
           </ul>
 
-          <div className="navbar-actions">
-            <div className="nav-search-box">
-              <FiSearch className="search-icon" />
+          <div className="wn-navbar-actions">
+            <div className="wn-nav-search-box">
+              <FiSearch className="wn-search-icon" />
               <input
                 type="text"
-                placeholder="Search doctors, specialties, symptoms..."
+                placeholder="Search doctors, specialties..."
               />
             </div>
 
-            <a href="/login" className="login-btn">
+            <a href="/login" className="wn-login-btn">
               Login / Sign Up
             </a>
 
-            <a href="/book" className="cta-book-btn">
+            <a href="/book" className="wn-cta-book-btn">
               <FiCalendar size={14} /> Book Appointment
             </a>
           </div>

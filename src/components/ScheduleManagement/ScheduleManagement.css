@@ -1,0 +1,205 @@
+/* Container Layout */
+.schedule-container {
+  background-color: #f4f7f9;
+  padding: 24px;
+  min-height: 100vh;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  color: #334155;
+}
+
+.schedule-grid {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 24px;
+}
+
+@media (max-width: 900px) {
+  .schedule-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Day Selector Styling */
+.day-selector-card h3 {
+  font-size: 16px;
+  margin: 0 0 16px 0;
+  color: #0f172a;
+}
+
+.day-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.day-btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  border-radius: 10px;
+  border: 1px solid #e2e8f0;
+  background-color: #f8fafc;
+  color: #334155;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.day-btn:hover {
+  background-color: #f1f5f9;
+}
+
+.day-btn.active {
+  background-color: #003853;
+  color: #ffffff;
+  border-color: #003853;
+}
+
+.slot-count-badge {
+  font-size: 11px;
+  padding: 2px 8px;
+  border-radius: 12px;
+  background-color: #ffffff;
+  color: #64748b;
+  border: 1px solid #cbd5e1;
+}
+
+.day-btn.active .slot-count-badge {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  border: none;
+}
+
+/* Schedule Panel Styles */
+.schedule-main-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.add-slot-form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)) auto;
+  gap: 16px;
+  align-items: flex-end;
+}
+
+@media (max-width: 768px) {
+  .add-slot-form {
+    grid-template-columns: 1fr;
+  }
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-group label {
+  font-size: 12px;
+  font-weight: 600;
+  color: #64748b;
+}
+
+.form-group input,
+.form-group select {
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
+  outline: none;
+  font-size: 14px;
+  color: #0f172a;
+  background-color: #ffffff;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #003853;
+}
+
+.add-btn {
+  height: 40px;
+}
+
+/* Configured Slots List */
+.slot-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.slot-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 16px;
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+}
+
+.slot-details {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.slot-time {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.slot-type-tag {
+  background-color: #e0f2fe;
+  color: #0369a1;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 6px;
+}
+
+.slot-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.delete-btn {
+  background: none;
+  border: none;
+  color: #ef4444;
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
+}
+
+.delete-btn:hover {
+  background-color: #fee2e2;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 32px;
+  color: #64748b;
+  font-size: 14px;
+}
+
+.save-toast-banner {
+  margin-bottom: 1.5rem;
+  padding: 12px 20px;
+  background-color: #dcfce7;
+  color: #15803d;
+  border: 1px solid #bbf7d0;
+  border-radius: 8px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  animation: fadeIn 0.2s ease-in-out;
+}

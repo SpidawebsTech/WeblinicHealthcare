@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './HomeHealthTracker.css';
 
 const HomeHealthTracker = () => {
-  const [requestStatus, setRequestStatus] = useState('En-Route'); // States: 'Requested', 'Assigned', 'En-Route', 'In-Progress', 'Completed', 'Escalated'
+  const [requestStatus, setRequestStatus] = useState('En-Route'); 
   const [isEscalated, setIsEscalated] = useState(false);
 
   const steps = ['Requested', 'Staff Assigned', 'En-Route', 'In-Progress', 'Completed'];
@@ -20,7 +20,6 @@ const HomeHealthTracker = () => {
 
   return (
     <div className="tracker-container">
-      {/* Urgent Escalation Banner */}
       {isEscalated && (
         <div className="escalation-banner">
           <div className="escalation-content">
@@ -34,7 +33,6 @@ const HomeHealthTracker = () => {
         </div>
       )}
 
-      {/* Header Summary */}
       <div className="tracker-card header-card">
         <div>
           <span className="badge">ID: #HH-8942</span>
@@ -48,7 +46,6 @@ const HomeHealthTracker = () => {
         </div>
       </div>
 
-      {/* Progress Bar */}
       <div className="tracker-card">
         <h3>Request Progress</h3>
         <div className="progress-bar-container">
@@ -61,9 +58,7 @@ const HomeHealthTracker = () => {
         </div>
       </div>
 
-      {/* Main Grid */}
       <div className="tracker-grid">
-        {/* Field Staff Card & Map */}
         <div className="tracker-card">
           <h3>Assigned Provider</h3>
           <div className="provider-info">
@@ -82,8 +77,7 @@ const HomeHealthTracker = () => {
             </div>
           </div>
         </div>
-
-        {/* Live Vitals Feed */}
+        
         <div className="tracker-card">
           <h3>Visit Notes & Vitals Feed</h3>
           <div className="vitals-grid">
@@ -116,7 +110,6 @@ const HomeHealthTracker = () => {
         </div>
       </div>
 
-      {/* Settlement Block */}
       <div className="tracker-card settlement-card">
         <h3>Payment & Billing Summary</h3>
         <div className="settlement-details">
