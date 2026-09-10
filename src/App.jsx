@@ -23,6 +23,14 @@ import InsuranceClaimsTracker from './components/InsuranceClaimsTracker/Insuranc
 import NotificatonsPage from "./components/NotificationsPage/NotificationsPage";
 import BillingHistory from "./components/BillingHistory/BillingHistory";
 import AccountSettings from "./components/AccountSettings/AccountSettings";
+import DoctorDashboard from "./components/DoctorDashboard/DoctorDashboard";
+import ScheduleManagement from "./components/ScheduleManagement/ScheduleManagement";
+import PrescriptionEntry from "./components/PrescriptionEntry/PrescriptionEntry";
+import LabOrderCreation from "./components/LabOrderCreation/LabOrderCreation";
+import PatientRecords from "./components/PatientRecords/PatientRecords";
+import Earnings from "./components/Earnings/Earnings";
+import DoctorProfileSettings from "./components/DoctorProfileSettings/DoctorProfileSettings";
+import SecondOpinionQueue from "./components/SecondOpinionQueue/SecondOpinionQueue";
 import ScrollToTop from "./components/ScrollToTop";
 
 const MedicalRecords = () => <h2>Medical Records & Diagnostic History Hub</h2>;
@@ -62,6 +70,14 @@ function App() {
         <Route path="/notifications" element={<NotificatonsPage />} />
         <Route path="/billing-history" element={<BillingHistory />} />
         <Route path="/settings" element={<AccountSettings/>} />
+        <Route path="/doctor/dashboard" element={<DoctorDashboard />} />
+        <Route path="/doctor/schedule" element={<ScheduleManagement />} />
+        <Route path="/doctor/prescriptionentry" element={<PrescriptionEntry />} />
+        <Route path="lab-order" element={<LabOrderCreation />} />
+        <Route path="/records" element={<PatientRecords />} />
+        <Route path="/earnings" element={<Earnings />} />
+        <Route path="/doctor-settings" element={<DoctorProfileSettings />} />
+        <Route path="/second-opinion-queue" element={<SecondOpinionQueue />} />
       </Routes>
     </BrowserRouter>
   );

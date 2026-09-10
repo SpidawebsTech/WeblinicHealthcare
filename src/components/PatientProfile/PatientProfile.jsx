@@ -224,5 +224,4 @@ function PatientProfile() {
     </DashboardLayout>
   );
 }
-
 export default PatientProfile;

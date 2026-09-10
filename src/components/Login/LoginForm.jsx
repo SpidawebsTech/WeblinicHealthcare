@@ -16,7 +16,7 @@ function LoginForm() {
     if (role === "patient") {
       navigate("/dashboard");
     } else {
-      navigate("/doctor-dashboard");
+      navigate("/doctor/dashboard");
     }
   };
 
